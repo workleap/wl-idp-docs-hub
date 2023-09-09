@@ -1,0 +1,26 @@
+{
+    "name": "wl-idp-docs-hub",
+    "author": "Workleap",
+    "description": "Documentation hub for Workleap IDP.",
+    "private": true,
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gsoft-inc/wl-idp-docs-hub.git"
+    },
+    "scripts": {
+        "dev": "retype start",
+        "lint": "eslint . --max-warnings=-1 --cache --cache-location node_modules/.cache/eslint",
+        "clean": "pnpm dlx rimraf dist node_modules/.cache",
+        "reset": "pnpm clean && pnpm reset:modules",
+        "reset:modules": "pnpm dlx rimraf node_modules pnpm-lock.yaml",
+        "list-outdated-deps": "pnpm outdated --format list",
+        "update-outdated-deps": "pnpm update --latest"
+    },
+    "devDependencies": {
+        "@workleap/eslint-plugin": "2.1.0",
+        "eslint": "8.49.0",
+        "retypeapp": "3.4.0"
+    },
+    "packageManager": "pnpm@8.6.0"
+}
