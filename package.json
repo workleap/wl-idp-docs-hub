@@ -20,7 +20,7 @@
     "devDependencies": {
         "@workleap/eslint-plugin": "2.1.0",
         "eslint": "8.49.0",
-        "retypeapp": "3.4.0"
+        "retypeapp": "3.4.1"
     },
     "packageManager": "pnpm@8.6.0"
 }
