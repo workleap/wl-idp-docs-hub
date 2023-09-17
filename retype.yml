@@ -12,6 +12,9 @@ breadcrumb:
     enabled: true
     home: false
 
+start:
+    pro: true
+
 # -------------------
 # Retype
 # -------------------
