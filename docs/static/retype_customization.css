@@ -5,7 +5,7 @@
 }
 
 #docs-sidebar-right li {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 /**** Mobile improvements ****/
