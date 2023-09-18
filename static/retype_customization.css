@@ -4,7 +4,7 @@
     padding-left: 1rem !important;
 }
 
-.docs-sidebar-right li {
+#docs-sidebar-right li {
     word-break: break-all;
 }
 
