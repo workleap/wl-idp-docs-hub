@@ -1,5 +1,11 @@
+/**** Content improvements ****/
+
 .docs-markdown > ol, .docs-markdown > ul {
     padding-left: 1rem !important;
+}
+
+.docs-sidebar-right li {
+    word-break: break-all;
 }
 
 /**** Mobile improvements ****/
