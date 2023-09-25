@@ -6,7 +6,7 @@ icon: question
 
 # Why Retype over GitHub readme
 
-While GitHub `README.md` files are great, there are a few advantages to use a documentation platform like Retype:
+While GitHub `README.md` files are great, there are several compelling reasons to consider using a documentation platform like Retype:
 
 1. **Better Structuring:** Retype simplifies the organization of documentation by allowing easy division into multiple files and provides an intuitive navigation system with a left sidebar for seamless browsing.
 
