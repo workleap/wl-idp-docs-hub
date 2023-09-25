@@ -28,7 +28,7 @@ While GitHub `README.md` files are great, there are several compelling reasons t
 
 9. **Custom CSS:** Retype allows to add [custom global CSS](https://retype.com/components/container/#custom-global-css) and [CSS classes to containers](https://retype.com/components/container/#custom--class).
 
-10. **The Hub functionality:** Retype's [hub functionality](https://retype.com/configuration/project/#hub) enables the interlinking of multiple websites, facilitating seamless navigation between related resources.
+10. **The Hub Functionality:** Retype's [hub functionality](https://retype.com/configuration/project/#hub) enables the interlinking of multiple websites, facilitating seamless navigation between related resources.
 
 By choosing Retype, we can take advantage of these features to enhance our documentation's organization, accessibility, and overall developers experience.
 
