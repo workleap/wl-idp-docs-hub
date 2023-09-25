@@ -34,13 +34,13 @@ By choosing Retype, we can take advantage of these features to enhance our docum
 
 ## Comparison with other documentation platforms
 
-When considering documentation platforms, it's essential to explore alternatives to Retype. Several options exist, including SaaS-based solutions like [Gitbook](https://www.gitbook.com/) and self-hosted options like [Docusaurus](https://docusaurus.io/), [Rspress](https://rspress.dev/), or even creating a custom website using [Next.js](https://nextjs.org/).
+When considering documentation platforms, it's essential to explore alternatives to [Retype](https://retype.com/). Several options exist, including SaaS-based solutions like [Gitbook](https://www.gitbook.com/) and self-hosted options like [Docusaurus](https://docusaurus.io/), [Rspress](https://rspress.dev/), or even creating a custom website using [Next.js](https://nextjs.org/).
 
-### SaaS-Based Platforms
+### SaaS-based platforms
 
 SaaS-based platforms like Gitbook offer convenience but can fall short in terms of customization and often come with complex pricing structures, particularly when managing a collection of libraries like Workleap's IDP.
 
-### Solution-Based Platforms
+### Solution-based platforms
 
 Solution-based platforms like Docusaurus can match Retype's feature set but tend to have a higher entry barrier. Each website created with Docusaurus is entirely custom and involves frontend tooling. The entry barrier increases significantly because developers must possess knowledge of how frontend tools operate and how to build a React application.
 
