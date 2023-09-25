@@ -243,7 +243,7 @@ You can now develop a Retype site locally with the pro features without the need
 1. Locate the Retype license key in our secure Vault.
 2. Utilize the [Retype CLI](https://retype.com/guides/cli/#retype-wallet) to create your wallet.
 
-## Host the site on GitHub pages
+## Host your site on GitHub pages
 
 To use our [Retype enterprise license](https://retype.com/pro/), and for every hub features of Retype to work properly, the site must be hosted on the `https://gsoft-inc.github.io` domain. As this is a [GitHub Pages](https://pages.github.com/) domain, to join the hub, your Retype site must be deployed with GitHub Pages.
 
@@ -253,6 +253,6 @@ To configure your Retype site to be deployed with GitHub Pages, refer to the fol
 You don't need to set the Retype Enterprise license key as it's already configured as an organization secret.
 !!!
 
-## Add the site to the hub
+## Add your site to the hub
 
 Send a PR to the [wl-idp-docs-hub](https://github.com/gsoft-inc/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap IDP hub!
