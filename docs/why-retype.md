@@ -18,11 +18,11 @@ While GitHub `README.md` files are great, there are several compelling reasons t
 
 5. **Advanced Code Block Features:** Retype's code blocks support features like [line highlighting](https://retype.com/components/code-block/#line-highlighting) and optional [titles](https://retype.com/components/code-block/#title), enhancing the presentation of code samples.
 
-6. **Outbound Links:** Retype automatically identifies and manages external [(outbound) links](https://retype.com/configuration/project/#outbound) within the project, opening them in new tabs when clicked for a smoother user experience.
+6. **Rich components library:** Retype offers out of the box a rich collection of [markdown components](https://retype.com/components/) that should meet the requirements of most documentation websites.
 
-7. **Multiple Layouts:** Retype offers three distinct [layouts](https://retype.com/configuration/page/#layout) out of the box: `page`, `central`, and `blog`, allowing flexibility in presentation.
+7. **Outbound Links:** Retype automatically identifies and manages external [(outbound) links](https://retype.com/configuration/project/#outbound) within the project, opening them in new tabs when clicked for a smoother user experience.
 
-8. **Pages Visibility Control:** Retype supports both [Private](https://retype.com/configuration/page/#private) & [Protected](https://retype.com/configuration/page/#protected) pages, enabling controlled access to content.
+8. **Multiple Layouts:** Retype offers three distinct [layouts](https://retype.com/configuration/page/#layout) out of the box: `page`, `central`, and `blog`, allowing flexibility in presentation.
 
 9. **Custom CSS:** Retype allows to add [custom global CSS](https://retype.com/components/container/#custom-global-css) and [CSS classes to containers](https://retype.com/components/container/#custom--class).
 
