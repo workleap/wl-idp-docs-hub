@@ -2,6 +2,8 @@
 layout: page
 ---
 
-# Welcome to the hub!
+# Workleap Internal Developer Platform (IDP) Libraries
 
-The hub is a work in progress. Once completed, you'll be able to quickly find the documentation for every library of the Workleap's internal developers platform (IDP).
+Welcome to the documentation hub for Workleap IDP libraries. On this site, you'll discover a variety of libraries that collectively constitutes the internal developer platform for creating applications on the Workleap platform.
+
+![](/static/workleap-bg.png)

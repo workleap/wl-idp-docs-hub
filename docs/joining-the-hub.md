@@ -1,9 +1,10 @@
 ---
 order: 90
-label: "Join the hub"
+icon: rocket
+label: "Joining the hub"
 ---
 
-# Join the hub
+# Joining the hub
 
 To include your library documentation in Workleap's IDP hub, follow these steps.
 
