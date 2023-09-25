@@ -83,3 +83,24 @@ root
 
 In summary, platforms like Docusaurus demand frontend expertise to write documentation effectively, while Retype only requires a basic understanding of markdown. Retype functions as a command-line interface (CLI) that compiles markdown files into a website, making it adaptable even within a `.NET` repository since it supports the [.NET](https://retype.com/guides/getting-started/) platform.
 
+### .NET support
+
+Retype fully supports the `.NET` platform, making it a seamless choice for `.NET` developers:
+
+```bash
+dotnet tool install retypeapp --global
+retype start
+```
+
+With Retype's `.NET` support, creating documentation for an IDP backend library becomes straightforward. All you need to do is include a `docs` folder at the root of your repository, and Retype will handle the rest:
+
+```
+wl-domain-event-propagation
+├── docs
+├──── getting-started.md
+├──── guides
+├─────── building-releasing-versioning.md
+├── src
+├── retype.yml
+```
+
