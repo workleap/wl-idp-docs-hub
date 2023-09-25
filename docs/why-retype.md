@@ -40,9 +40,9 @@ When considering documentation platforms, it's essential to explore alternatives
 
 SaaS-based platforms like Gitbook offer convenience but can fall short in terms of customization and often come with complex pricing structures, particularly when managing a collection of libraries like Workleap's IDP.
 
-### Solution-based platforms
+### Self-hosted platforms
 
-Solution-based platforms like Docusaurus can match Retype's feature set but tend to have a higher entry barrier. Each website created with Docusaurus is entirely custom and involves frontend tooling. The entry barrier increases significantly because developers must possess knowledge of how frontend tools operate and how to build a React application.
+Self-hosted platforms like Docusaurus can match Retype's feature set but tend to have a higher entry barrier. Each website created with Docusaurus is entirely custom and involves frontend tooling. The entry barrier increases significantly because developers must possess knowledge of how frontend tools operate and how to build a React application.
 
 One of Retype's strengths lies in its balance between customization and ease of entry. It provides just enough customization to create rich and personalized documentation while maintaining a very low entry barrier. Basic knowledge of markdown is all that's needed to get started.
 
