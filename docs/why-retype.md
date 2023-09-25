@@ -83,7 +83,7 @@ root
 
 In summary, platforms like Docusaurus demand frontend expertise to write documentation effectively, while Retype only requires a basic understanding of markdown. Retype functions as a command-line interface (CLI) that compiles markdown files into a website, making it adaptable even within a `.NET` repository since it supports the [.NET](https://retype.com/guides/getting-started/) platform.
 
-### .NET support
+## .NET support
 
 Retype fully supports the `.NET` platform, making it a seamless choice for `.NET` developers:
 
