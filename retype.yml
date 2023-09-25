@@ -25,7 +25,7 @@ output: .retype
 url: https://gsoft-inc.github.io/wl-idp-docs-hub/
 
 branding:
-    title: "docs hub"
+    title: "Developer Platform"
     logo: ./static/logo.png
 
 favicon: ./static/favicon.png
@@ -36,16 +36,6 @@ edit:
     branch: main
 
 links:
-    - text: Found a bug?
-      icon: issue-opened
-      link: https://github.com/gsoft-inc/wl-idp-docs-hub/issues
-      target: blank
-
-    - text: Feature requests
-      icon: comment-discussion
-      link: https://github.com/gsoft-inc/wl-idp-docs-hub/discussions
-      target: blank
-
     - text: Github
       icon: mark-github
       link: https://github.com/gsoft-inc/wl-idp-docs-hub
@@ -53,15 +43,6 @@ links:
 
 footer:
     copyright: "&copy; Copyright {{ year }} - Workleap"
-    links:
-        - text: About
-          icon: question
-          link: about.md
-
-        - text: License
-          icon: shield-check
-          link: https://github.com/gsoft-inc/wl-idp-docs-hub/blob/main/LICENSE
-          target: blank
 
 # To allow using {{ }} in code blocks.
 # View: https://github.com/retypeapp/retype/issues/622#issuecomment-1712391219.

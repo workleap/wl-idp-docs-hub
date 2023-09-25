@@ -1,6 +1,5 @@
 ---
-order: 100
-label: "Welcome"
+layout: page
 ---
 
 # Welcome to the hub!
