@@ -199,7 +199,7 @@ root
 Then, open the newly created `_includes/head.html` file and copy/paste the following content:
 
 ```html _includes/head.html
-<link href="https://gsoft-inc.github.io/wl-idp-docs-hub/static/retype_customization.css" rel="stylesheet" />
+<link href="https://gsoft-inc.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
 ```
 
 ### Activate pro features
