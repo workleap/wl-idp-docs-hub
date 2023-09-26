@@ -31,3 +31,10 @@
         display: none !important;
     }
 }
+
+/**** Utilities ****/
+
+.align-image-left {
+    display: flex;
+    justify-content: start;
+}
