@@ -18,6 +18,10 @@ While GitHub `README.md` files are great, there are several compelling reasons t
 
 4. **Broken Link Detection:** Retype's compilers swiftly identify any broken links (including anchors), ensuring that your documentation remains error-free.
 
+:::align-image-left
+![](/static/broken-link.png)
+:::
+
 5. **Advanced Code Block Features:** Retype's code blocks support features like [line highlighting](https://retype.com/components/code-block/#line-highlighting) and optional [titles](https://retype.com/components/code-block/#title), enhancing the presentation of code samples.
 
 6. **Rich components collection:** Retype offers out of the box a rich collection of [markdown components](https://retype.com/components/) that should meet the requirements of most documentation websites.
