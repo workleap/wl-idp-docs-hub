@@ -4,7 +4,7 @@ label: "Why Retype"
 icon: question
 ---
 
-# Why Retype
+# Why Retype?
 
 ## Comparison with GitHub readme files
 
