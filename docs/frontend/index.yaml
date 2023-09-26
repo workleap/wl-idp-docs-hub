@@ -1,3 +1,4 @@
-order: 100
+order: 90
 expanded: true
 icon: browser
+label: Frontend libraries
