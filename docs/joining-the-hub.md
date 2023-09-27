@@ -60,7 +60,7 @@ Please note that Retype is also compatible with `.NET` projects. If you are work
 
 ### Try it :rocket:
 
-Start your Retype site by executing the `dev-docs` script.
+Start your new Retype site by executing the `dev-docs` script.
 
 ### Adhere to Workleap's conventions
 
@@ -220,6 +220,9 @@ outbound:
 breadcrumb:
     enabled: true
     home: false
+
+toc:
+    depth: 2
 
 hub:
     link: https://gsoft-inc.github.io/wl-idp-docs-hub/

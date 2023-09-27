@@ -12,6 +12,9 @@ breadcrumb:
     enabled: true
     home: false
 
+toc:
+    depth: 2
+
 start:
     pro: true
 
