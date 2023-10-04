@@ -1,5 +1,5 @@
 ---
-order: 70
+order: 50
 label: "Why Retype?"
 icon: question
 ---

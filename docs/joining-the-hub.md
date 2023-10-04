@@ -1,5 +1,5 @@
 ---
-order: 100
+order: 60
 icon: rocket
 label: "Joining the hub"
 ---
