@@ -28,7 +28,7 @@ output: .retype
 url: https://gsoft-inc.github.io/wl-idp-docs-hub/
 
 branding:
-    title: "IDP Frontend"
+    title: "Frontend IDP"
     logo: ./static/logo.png
 
 favicon: ./static/favicon.png
