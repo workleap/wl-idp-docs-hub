@@ -1,11 +1,10 @@
 ---
 order: 70
-label: "Design Systems"
-icon: book
+icon: file-media
 expanded: true
 ---
 
-# Design Systems
+# Design systems
 
 - [Hopper](./hopper.md): Workleap's design system.
 - [Orbiter](./orbiter.md): Workleap's transitional design system.

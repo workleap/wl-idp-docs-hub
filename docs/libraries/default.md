@@ -1,11 +1,10 @@
 ---
 order: 80
-label: "Building Blocks"
-icon: gear
+icon: package
 expanded: true
 ---
 
-# Building Blocks
+# Libraries
 
 - [Web configs](./web-configs.md)
 - [Squide](./squide.md)
