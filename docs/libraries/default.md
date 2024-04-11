@@ -8,3 +8,4 @@ expanded: true
 
 - [Web configs](./web-configs.md)
 - [Squide](./squide.md)
+- [Chromatic-ADO](./chromatic-ado.md)
