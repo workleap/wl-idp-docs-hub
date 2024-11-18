@@ -14,13 +14,13 @@
         "clean": "pnpm dlx rimraf dist node_modules/.cache",
         "reset": "pnpm clean && pnpm reset:modules",
         "reset:modules": "pnpm dlx rimraf node_modules pnpm-lock.yaml",
-        "list-outdated-deps": "pnpm outdated --format list",
-        "update-outdated-deps": "pnpm update --latest"
+        "list-outdated-deps": "pnpm outdated --format list !eslint",
+        "update-outdated-deps": "pnpm update --latest !eslint"
     },
     "devDependencies": {
-        "@workleap/eslint-plugin": "2.1.0",
+        "@workleap/eslint-plugin": "3.2.3",
         "eslint": "8.49.0",
-        "retypeapp": "3.5.0"
+        "retypeapp": "3.6.0"
     },
-    "packageManager": "pnpm@8.6.0"
+    "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
 }
