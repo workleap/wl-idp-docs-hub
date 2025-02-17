@@ -1,5 +1,5 @@
 ---
 order: 80
 label: "Squide"
-redirect: https://gsoft-inc.github.io/wl-squide
+redirect: https://workleap.github.io/wl-squide
 ---
