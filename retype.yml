@@ -34,7 +34,7 @@ branding:
 favicon: ./static/favicon.png
 
 edit:
-    repo: "https://github.com/gsoft-inc/wl-idp-docs-hub"
+    repo: "https://github.com/workleap/wl-idp-docs-hub"
     base: /docs
     branch: main
 
@@ -45,7 +45,7 @@ links:
 
     - text: Github
       icon: mark-github
-      link: https://github.com/gsoft-inc/wl-idp-docs-hub
+      link: https://github.com/workleap/wl-idp-docs-hub
       target: blank
 
 footer:
