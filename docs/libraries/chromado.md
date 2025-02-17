@@ -1,5 +1,5 @@
 ---
 order: 70
 label: "Chromado"
-redirect: https://gsoft-inc.github.io/wl-chromado
+redirect: https://workleap.github.io/wl-chromado
 ---
