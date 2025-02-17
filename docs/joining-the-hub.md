@@ -181,7 +181,7 @@ Icon | Section
 
 ### Include the shared CSS customizations file
 
-Our Retype websites share a [CSS file](https://github.com/gsoft-inc/wl-idp-docs-hub/blob/main/docs/static/retype_customization.css) that contains several customizations to enhance the default Retype style. To incorporate this file into your Retype site, follow these steps:
+Our Retype websites share a [CSS file](https://github.com/workleap/wl-idp-docs-hub/blob/main/docs/static/retype_customization.css) that contains several customizations to enhance the default Retype style. To incorporate this file into your Retype site, follow these steps:
 
 #### Create the `_includes/head.html` file
 
@@ -258,4 +258,4 @@ You don't need to set the Retype Enterprise license key as it's already configur
 
 ## Add your site to the hub
 
-Send a PR to the [wl-idp-docs-hub](https://github.com/gsoft-inc/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap IDP hub!
+Send a PR to the [wl-idp-docs-hub](https://github.com/workleap/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap IDP hub!
