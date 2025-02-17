@@ -146,7 +146,7 @@ Then, add the following links to the footer of your Retype site:
 
 Link | Description
 ---  | ---
-About | A link to an about page including meta informations about your library project ([example](https://gsoft-inc.github.io/wl-web-configs/about/)).
+About | A link to an about page including meta informations about your library project ([example](https://workleap.github.io/wl-web-configs/about/)).
 License | A link to the license of your library.
 
 Your Retype footer links configuration should closely resemble the following configurations
@@ -173,11 +173,11 @@ We recommend adding an icon before each [folder item](https://retype.com/configu
 
 Icon | Section
 ---  | ---
-:icon-rocket: | Use a `rocket` icon for a "Getting Started" section ([example](https://gsoft-inc.github.io/wl-squide/getting-started/)).
-:icon-book: | Use a `book` icon for a "Guides" section ([example](https://gsoft-inc.github.io/wl-squide/guides/)).
-:icon-gear: | Use a `gear` icon for a "Reference" section ([example](https://gsoft-inc.github.io/wl-squide/reference/)).
-:icon-question: | Use a `question` icon for a "Troubleshooting" section ([example](https://gsoft-inc.github.io/wl-squide/troubleshooting/)).
-:icon-command-palette: | Use a `command-palette` icon for a "Sample" section ([example](https://gsoft-inc.github.io/wl-squide/samples/)).
+:icon-rocket: | Use a `rocket` icon for a "Getting Started" section ([example](https://workleap.github.io/wl-squide/getting-started/)).
+:icon-book: | Use a `book` icon for a "Guides" section ([example](https://workleap.github.io/wl-squide/guides/)).
+:icon-gear: | Use a `gear` icon for a "Reference" section ([example](https://workleap.github.io/wl-squide/reference/)).
+:icon-question: | Use a `question` icon for a "Troubleshooting" section ([example](https://workleap.github.io/wl-squide/troubleshooting/)).
+:icon-command-palette: | Use a `command-palette` icon for a "Sample" section ([example](https://workleap.github.io/wl-squide/samples/)).
 
 ### Include the shared CSS customizations file
 
@@ -199,7 +199,7 @@ root
 Then, open the newly created `_includes/head.html` file and copy/paste the following content:
 
 ```html _includes/head.html
-<link href="https://gsoft-inc.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
+<link href="https://workleap.github.io/wl-idp-docs-hub/static/retype-customization.css" rel="stylesheet" />
 ```
 
 ### Activate pro features
@@ -225,7 +225,7 @@ toc:
     depth: 2
 
 hub:
-    link: https://gsoft-inc.github.io/wl-idp-docs-hub/
+    link: https://workleap.github.io/wl-idp-docs-hub/
     alt: Workleap's IDP homepage
 
 start:
@@ -248,7 +248,7 @@ You can now develop a Retype site locally with the pro features without the need
 
 ## Host your site on GitHub pages
 
-To use our [Retype enterprise license](https://retype.com/pro/), and for every hub features of Retype to work properly, the site must be hosted on the `https://gsoft-inc.github.io` domain. As this is a [GitHub Pages](https://pages.github.com/) domain, to join the hub, your Retype site must be deployed with GitHub Pages.
+To use our [Retype enterprise license](https://retype.com/pro/), and for every hub features of Retype to work properly, the site must be hosted on the `https://workleap.github.io` domain. As this is a [GitHub Pages](https://pages.github.com/) domain, to join the hub, your Retype site must be deployed with GitHub Pages.
 
 To configure your Retype site to be deployed with GitHub Pages, refer to the following [guide](https://retype.com/hosting/github-pages/).
 
