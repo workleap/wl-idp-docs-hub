@@ -25,7 +25,7 @@ start:
 input: ./docs
 output: .retype
 
-url: https://gsoft-inc.github.io/wl-idp-docs-hub/
+url: https://workleap.github.io/wl-idp-docs-hub/
 
 branding:
     title: "Frontend IDP"
