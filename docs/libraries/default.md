@@ -9,3 +9,5 @@ expanded: true
 - [Web configs](./web-configs.md)
 - [Squide](./squide.md)
 - [Chromado](./chromado.md)
+- [Honeycomb](./honeycomb.md)
+- [Mixpanel](./mixpanel.md)

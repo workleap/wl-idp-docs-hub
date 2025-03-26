@@ -10,3 +10,4 @@ expanded: true
 - [Orbiter](./orbiter.md): Workleap's transitional design system.
 - [Orbit](./orbit.md): Sharegate's design system.
 - [Igloo](./igloo.md): Officevibe's design system.
+- [Platform Widgets](./platform-widgets.md)
