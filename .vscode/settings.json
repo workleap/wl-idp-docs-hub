@@ -32,5 +32,11 @@
     // Settings for third parties that are frequently used
     "files.associations": {
         "*.snap": "javascriptreact"
-    }
+    },
+
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".github/copilot/commit-message-instructions.md"
+        }
+    ]
 }
