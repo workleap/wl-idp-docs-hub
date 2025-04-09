@@ -43,6 +43,8 @@ footer:
 templating:
     enabled: false
 
+showSidebarFilter: false
+
 verbose: true
 ```
 
