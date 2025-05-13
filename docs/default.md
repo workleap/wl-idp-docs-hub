@@ -2,8 +2,8 @@
 layout: page
 ---
 
-# Workleap Frontend Internal Developer Platform (IDP)
+# Workleap Frontend Platform
 
-Welcome to the documentation hub for Workleap Frontend IDP libraries. On this site, you'll discover a variety of libraries that collectively constitutes the internal developer platform for creating frontend applications on the Workleap platform.
+Welcome to the documentation hub for Workleap Frontend libraries. On this site, you'll discover a variety of libraries that collectively constitutes the developer platform for creating frontend applications at Workleap.
 
 ![](/static/workleap-bg.png)
