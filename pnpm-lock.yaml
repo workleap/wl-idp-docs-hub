@@ -15,8 +15,8 @@ importers:
         specifier: 8.49.0
         version: 8.49.0
       retypeapp:
-        specifier: 3.7.0
-        version: 3.7.0
+        specifier: 3.8.1
+        version: 3.8.1
 
 packages:
 
@@ -1558,8 +1558,8 @@ packages:
     resolution: {integrity: sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow==}
     engines: {node: '>= 4'}
 
-  retypeapp@3.7.0:
-    resolution: {integrity: sha512-ssIWm3bBtHvQXSWWpo/DlwEJ4Ajc1CmVa17cs5vSKVDTnY+nQopq3J+0+aHYKfg5UfGKg43CdgoLoP+VSqTdZw==}
+  retypeapp@3.8.1:
+    resolution: {integrity: sha512-x+dIC+BvU5nzVwo9sSfCQ5220dZNnh6vzq55TcfA2f5VZyI99c+jmtyxO6p3kMBrtmAH15Z6H5k3Cs0tteSLpA==}
     hasBin: true
 
   reusify@1.0.4:
@@ -3936,7 +3936,7 @@ snapshots:
 
   retry@0.12.0: {}
 
-  retypeapp@3.7.0: {}
+  retypeapp@3.8.1: {}
 
   reusify@1.0.4: {}
 
