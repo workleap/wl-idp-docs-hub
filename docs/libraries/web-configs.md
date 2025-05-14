@@ -1,5 +1,5 @@
 ---
 order: 90
-label: "Web configs"
+label: "Web Configs"
 redirect: https://workleap.github.io/wl-web-configs
 ---
