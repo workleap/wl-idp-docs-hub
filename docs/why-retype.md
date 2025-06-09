@@ -1,7 +1,6 @@
 ---
 order: 20
 label: "Why Retype?"
-icon: question
 ---
 
 # Why Retype?

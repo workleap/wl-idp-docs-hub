@@ -15,6 +15,11 @@ breadcrumb:
 toc:
     depth: 2
 
+nav:
+    mode: stack
+    icons:
+        mode: none
+
 start:
     pro: true
 

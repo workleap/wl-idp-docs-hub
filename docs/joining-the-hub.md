@@ -1,6 +1,5 @@
 ---
 order: 30
-icon: rocket
 label: "Joining the hub"
 ---
 
@@ -169,17 +168,17 @@ footer:
           target: blank
 ```
 
-#### Retype navigation folder items
+#### Retype navigation section/page items
 
-We recommend adding an icon before each [folder item](https://retype.com/configuration/folder/#icon) of the main navigation (on the left):
+When appropriate, we recommend adding the following section/page item to the main navigation (on the left):
 
-Icon | Section
----  | ---
-:icon-rocket: | Use a `rocket` icon for a "Getting Started" section ([example](https://workleap.github.io/wl-squide/getting-started/)).
-:icon-book: | Use a `book` icon for a "Guides" section ([example](https://workleap.github.io/wl-squide/guides/)).
-:icon-gear: | Use a `gear` icon for a "Reference" section ([example](https://workleap.github.io/wl-squide/reference/)).
-:icon-question: | Use a `question` icon for a "Troubleshooting" section ([example](https://workleap.github.io/wl-squide/troubleshooting/)).
-:icon-command-palette: | Use a `command-palette` icon for a "Sample" section ([example](https://workleap.github.io/wl-squide/samples/)).
+Item | Example
+--- | ---
+Introduction section | https://workleap.github.io/wl-squide/introduction
+Guides section | https://workleap.github.io/wl-squide/guides
+Reference section | https://workleap.github.io/wl-squide/reference
+Troubleshooting page | https://workleap.github.io/wl-squide/troubleshooting
+Sample page | https://workleap.github.io/wl-squide/samples
 
 ### Include the shared CSS customizations file
 
@@ -229,6 +228,11 @@ toc:
 hub:
     link: https://workleap.github.io/wl-idp-docs-hub/
     alt: Workleap's IDP homepage
+
+nav:
+    mode: stack
+    icons:
+        mode: none
 
 start:
     pro: true
