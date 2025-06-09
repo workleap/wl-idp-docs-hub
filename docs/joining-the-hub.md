@@ -5,7 +5,7 @@ label: "Joining the hub"
 
 # Joining the hub
 
-To include your library documentation in Workleap's IDP hub, follow these steps.
+To include your library documentation in Workleap's Frontend Platform hub, follow these steps.
 
 ## Create your Retype website
 
@@ -65,7 +65,7 @@ Start your new Retype site by executing the `dev-docs` script.
 
 ### Adhere to Workleap's conventions
 
-The following conventions are optional but highly recommend to to guarantee a consistent and unified experience for Workleap's developers within the Workleap IDP hub.
+The following conventions are optional but highly recommend to to guarantee a consistent and unified experience for Workleap's developers within the Workleap Frontend Platform hub.
 
 #### Icons
 
@@ -178,7 +178,7 @@ Introduction section | https://workleap.github.io/wl-squide/introduction
 Guides section | https://workleap.github.io/wl-squide/guides
 Reference section | https://workleap.github.io/wl-squide/reference
 Troubleshooting page | https://workleap.github.io/wl-squide/troubleshooting
-Sample page | https://workleap.github.io/wl-squide/samples
+Samples page | https://workleap.github.io/wl-squide/samples
 
 ### Include the shared CSS customizations file
 
@@ -227,7 +227,7 @@ toc:
 
 hub:
     link: https://workleap.github.io/wl-idp-docs-hub/
-    alt: Workleap's IDP homepage
+    alt: Workleap's Frontend Platform homepage
 
 nav:
     mode: stack
@@ -264,4 +264,4 @@ You don't need to set the Retype Enterprise license key as it's already configur
 
 ## Add your site to the hub
 
-Send a PR to the [wl-idp-docs-hub](https://github.com/workleap/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap IDP hub!
+Send a PR to the [wl-idp-docs-hub](https://github.com/workleap/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap Frontend Platform hub!
