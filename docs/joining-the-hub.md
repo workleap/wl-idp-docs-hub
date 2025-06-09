@@ -1,12 +1,11 @@
 ---
 order: 30
-icon: rocket
 label: "Joining the hub"
 ---
 
 # Joining the hub
 
-To include your library documentation in Workleap's IDP hub, follow these steps.
+To include your library documentation in Workleap's Frontend Platform hub, follow these steps.
 
 ## Create your Retype website
 
@@ -66,7 +65,7 @@ Start your new Retype site by executing the `dev-docs` script.
 
 ### Adhere to Workleap's conventions
 
-The following conventions are optional but highly recommend to to guarantee a consistent and unified experience for Workleap's developers within the Workleap IDP hub.
+The following conventions are optional but highly recommend to to guarantee a consistent and unified experience for Workleap's developers within the Workleap Frontend Platform hub.
 
 #### Icons
 
@@ -169,17 +168,17 @@ footer:
           target: blank
 ```
 
-#### Retype navigation folder items
+#### Retype navigation section/page items
 
-We recommend adding an icon before each [folder item](https://retype.com/configuration/folder/#icon) of the main navigation (on the left):
+When appropriate, we recommend adding the following section/page item to the main navigation (on the left):
 
-Icon | Section
----  | ---
-:icon-rocket: | Use a `rocket` icon for a "Getting Started" section ([example](https://workleap.github.io/wl-squide/getting-started/)).
-:icon-book: | Use a `book` icon for a "Guides" section ([example](https://workleap.github.io/wl-squide/guides/)).
-:icon-gear: | Use a `gear` icon for a "Reference" section ([example](https://workleap.github.io/wl-squide/reference/)).
-:icon-question: | Use a `question` icon for a "Troubleshooting" section ([example](https://workleap.github.io/wl-squide/troubleshooting/)).
-:icon-command-palette: | Use a `command-palette` icon for a "Sample" section ([example](https://workleap.github.io/wl-squide/samples/)).
+Item | Example
+--- | ---
+Introduction section | https://workleap.github.io/wl-squide/introduction
+Guides section | https://workleap.github.io/wl-squide/guides
+Reference section | https://workleap.github.io/wl-squide/reference
+Troubleshooting page | https://workleap.github.io/wl-squide/troubleshooting
+Samples page | https://workleap.github.io/wl-squide/samples
 
 ### Include the shared CSS customizations file
 
@@ -228,7 +227,12 @@ toc:
 
 hub:
     link: https://workleap.github.io/wl-idp-docs-hub/
-    alt: Workleap's IDP homepage
+    alt: Workleap's Frontend Platform homepage
+
+nav:
+    mode: stack
+    icons:
+        mode: none
 
 start:
     pro: true
@@ -260,4 +264,4 @@ You don't need to set the Retype Enterprise license key as it's already configur
 
 ## Add your site to the hub
 
-Send a PR to the [wl-idp-docs-hub](https://github.com/workleap/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap IDP hub!
+Send a PR to the [wl-idp-docs-hub](https://github.com/workleap/wl-idp-docs-hub) GitHub repository to add your site to the hub. Once merged, your site will be automatically added to the Workleap Frontend Platform hub!
