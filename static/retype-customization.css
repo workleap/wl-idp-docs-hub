@@ -8,6 +8,14 @@
     word-break: break-word;
 }
 
+ul.list-icon {
+    padding-left: 0 !important;
+}
+
+p:not(.hidden):has(+ul) {
+    margin-bottom: 1.5rem !important;
+}
+
 /**** Mobile improvements ****/
 
 /* Hide the right sidebar toggles on mobile */
