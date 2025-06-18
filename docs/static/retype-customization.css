@@ -16,7 +16,7 @@ p:not(.hidden):has(+ul) {
     margin-bottom: 1.5rem !important;
 }
 
-li {
+#retype-main li {
     margin-bottom: 0.25rem !important;
 }
 
