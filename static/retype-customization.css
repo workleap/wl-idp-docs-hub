@@ -16,6 +16,10 @@ p:not(.hidden):has(+ul) {
     margin-bottom: 1.5rem !important;
 }
 
+li {
+    margin-bottom: 0.25rem !important;
+}
+
 /**** Mobile improvements ****/
 
 /* Hide the right sidebar toggles on mobile */
