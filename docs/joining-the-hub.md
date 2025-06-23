@@ -259,7 +259,7 @@ To use our [Retype enterprise license](https://retype.com/pro/), and for every h
 To configure your Retype site to be deployed with GitHub Pages, refer to the following [guide](https://retype.com/hosting/github-pages/).
 
 !!!info
-You don't need to set the Retype Enterprise license key as it's already configured as an organization secret.
+You don't have to set the Retype Enterprise license key as it's already configured as an organization secret.
 !!!
 
 ## Add your site to the hub
