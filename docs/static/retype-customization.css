@@ -8,13 +8,18 @@
     word-break: break-word;
 }
 
-ul.list-icon {
-    padding-left: 0 !important;
+ul {
+    margin-top: 1rem !important;
+    padding-left: 1.25rem !important;
 }
 
-ul.list-flush,
-ol.list-flush {
+ol {
+    margin-top: 1rem !important;
     padding-left: 1.5rem !important;
+}
+
+ul.list-icon {
+    padding-left: 0 !important;
 }
 
 p:not(.hidden):has(+ul) {
