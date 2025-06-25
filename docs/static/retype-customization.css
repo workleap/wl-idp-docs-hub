@@ -8,14 +8,18 @@
     word-break: break-word;
 }
 
-ul {
+#retype-main ul {
     margin-top: 1rem !important;
     padding-left: 1.25rem !important;
 }
 
-ol {
+#retype-main ol {
     margin-top: 1rem !important;
     padding-left: 1.5rem !important;
+}
+
+#retype-main li {
+    margin-bottom: 0.25rem !important;
 }
 
 ul.list-icon {
@@ -24,10 +28,6 @@ ul.list-icon {
 
 p:not(.hidden):has(+ul) {
     margin-bottom: 1.5rem !important;
-}
-
-#retype-main li {
-    margin-bottom: 0.25rem !important;
 }
 
 /**** Mobile improvements ****/
