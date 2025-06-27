@@ -51,7 +51,7 @@ ul.list-icon {
 
     /* Hide the history button on mobile */
     #retype-history-button {
-        display: none;
+        display: none !important;
     }
 
     /* Hide the right sidebar toggles on mobile */
