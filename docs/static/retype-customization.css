@@ -58,6 +58,15 @@ ul.list-icon {
     #retype-sidebar-right-toggle {
         display: none !important;
     }
+
+    /* Hiding the footer since it's clunky and the buttons text is wrapping on 3-4 lines */
+    #retype-content-footer {
+        display: none !important;
+    }
+
+    #docs-hub-link {
+        display: none !important;
+    }
 }
 
 /**** Utilities ****/
