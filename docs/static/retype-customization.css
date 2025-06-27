@@ -54,6 +54,12 @@ ul.list-icon {
     }
 }
 
+/**** Hide features ****/
+
+#retype-history-button {
+    display: none;
+}
+
 /**** Utilities ****/
 
 .align-image-left {
