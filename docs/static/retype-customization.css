@@ -64,6 +64,10 @@ ul.list-icon {
         display: none !important;
     }
 
+    #retype-back-to-top {
+        display: none !important;
+    }
+
     #docs-hub-link {
         display: none !important;
     }
