@@ -234,6 +234,10 @@ nav:
     icons:
         mode: none
 
+theme:
+    base:
+        nav-badge-margin-left: 0.75rem
+
 start:
     pro: true
 ```
