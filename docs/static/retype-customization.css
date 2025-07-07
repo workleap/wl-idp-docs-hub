@@ -34,6 +34,10 @@ td > p:last-child {
     margin-bottom: 0 !important;
 }
 
+td {
+    vertical-align: top;
+}
+
 /**** Mobile improvements ****/
 
 @media (max-width: 960px) {
