@@ -1,11 +1,11 @@
 ---
 order: 30
-label: "Joining the hub"
+label: "Joining the Hub"
 ---
 
-# Joining the hub
+# Joining the Hub
 
-To include your library documentation in Workleap's Frontend Platform hub, follow these steps.
+To include your library documentation in Workleap's Frontend Platform Hub, follow these steps.
 
 ## Create your Retype website
 
