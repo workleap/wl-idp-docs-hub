@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 20
 label: "Skew Protection"
 redirect: https://workleap.github.io/wl-netlify-skew-protection
 ---
