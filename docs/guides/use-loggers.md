@@ -12,6 +12,7 @@ Name | Documentation
 ---  | ---
 Squide | [Guide](https://workleap.github.io/wl-squide/guides/use-loggers/)
 Platform widgets | [Guide](https://dev.azure.com/workleap/WorkleapPlatform/_git/workleap-platform-widgets?path=/docs/user/usage/loggers.md&_a=preview)
+Telemetry | [Reference](https://workleap.github.io/wl-telemetry/introduction/reference/initializetelemetry/#loggers)
 LogRocket | [Reference](https://workleap.github.io/wl-telemetry/logrocket/reference/registerlogrocketinstrumentation/#loggers)
 Honeycomb | [Reference](https://workleap.github.io/wl-telemetry/honeycomb/reference/registerhoneycombinstrumentation/#loggers)
 Mixpanel | [Reference](https://workleap.github.io/wl-telemetry/mixpanel/reference/initializemixpanel/#loggers)
@@ -64,33 +65,36 @@ For reference, here's a description of each level:
 
 The following example shows how to integrate loggers into a Squide application (loggers are also supported in both React and non-React applications):
 
-```tsx !#13,17,23,27,31,36 index.tsx
+```tsx !#12,30,34,39 index.tsx
 import { createRoot } from "react-dom/client";
 import { initializeWidgets } from "@workleap-widgets/squide-firefly";
 import { initializeFirefly, FireflyProvider } from "@squide/firefly";
 import { BrowserConsoleLogger, LogLevel, type RootLogger } from "@workleap/logging";
-import { LogRocketLogger, registerLogRocketInstrumentation } from "@workleap/logrocket";
-import { registerHoneycombInstrumentation } from "@workleap/honeycomb";
-import { initializeMixpanel } from "@workleap/mixpanel";
-import { registerCommonRoomInstrumentation } from "@workleap/common-room";
+import { LogRocketLogger, } from "@workleap/logrocket";
+import { initializeTelemetry, TelemetryProvider } from "@workleap/telemetry/react";
+import { registerCommonRoomInstrumentation } from "@workleap/common-room/react";
 
-// Do not do this, it's only for training purpose.
+// Do not do this, it's only for demo purpose.
 const isDev = process.env === "development";
 
 const loggers: RootLogger[] = [isDev ? new BrowserConsoleLogger() : new LogRocketLogger(LogLevel.information)];
 
-// IMPORTANT: register LogRocket before Squide to capture bootstrapping logs.
-registerLogRocketInstrumentation("my-app-id", {
-    loggers
-})
-
-// IMPORTANT: register Honeycomb before Squide to capture bootstrapping logs.
-registerHoneycombInstrumentation("sample", "my-app-id", [/.+/g,], {
-    proxy: "https://sample-proxy",
-    loggers
-});
-
-initializeMixpanel("wlp", "development", {
+const telemetryClient = initializeTelemetry({
+    logRocket: {
+        appId: "my-app-id"
+    },
+    honeycomb: {
+        namespace: "sample",
+        serviceName: "my-app",
+        apiServiceUrls: [/.+/g],
+        options: {
+            proxy: "https://sample-proxy"
+        }
+    },
+    mixpanel: {
+        productId: "wlp",
+        envOrTrackingApiBaseUrl: "development"
+    },
     loggers
 });
 
@@ -117,7 +121,9 @@ const root = createRoot(document.getElementById("root")!);
 
 root.render(
     <FireflyProvider runtime={runtime}>
-        <App />
+        <TelemetryProvider client={telemetryClient}>
+            <App />
+        </TelemetryProvider>
     </FireflyProvider>
 );
 ```
@@ -130,42 +136,43 @@ Create the `LogRocketLogger` instance with a minimum log level of `LogLevel.info
 
 To troubleshoot an issue in production, remove the `LogLevel` from the `LogRocketLogger` constructor options and set the `verbose` option to `true` when applicable:
 
-```tsx !#13,18,25,30,35,51 index.tsx
+```tsx !#12,30,35,52 index.tsx
 import { createRoot } from "react-dom/client";
 import { initializeWidgets } from "@workleap-widgets/squide-firefly";
 import { initializeFirefly, FireflyProvider } from "@squide/firefly";
 import { BrowserConsoleLogger, type RootLogger } from "@workleap/logging";
-import { LogRocketLogger, registerLogRocketInstrumentation } from "@workleap/logrocket";
-import { registerHoneycombInstrumentation } from "@workleap/honeycomb";
-import { initializeMixpanel } from "@workleap/mixpanel";
-import { registerCommonRoomInstrumentation } from "@workleap/common-room";
+import { LogRocketLogger, } from "@workleap/logrocket";
+import { initializeTelemetry, TelemetryProvider } from "@workleap/telemetry/react";
+import { registerCommonRoomInstrumentation } from "@workleap/common-room/react";
 
-// Do not do this, it's only for training purpose.
+// Do not do this, it's only for demo purpose.
 const isDev = process.env === "development";
 
 const loggers: RootLogger[] = [isDev ? new BrowserConsoleLogger() : new LogRocketLogger()];
 
-// IMPORTANT: register LogRocket before Squide to capture bootstrapping logs.
-registerLogRocketInstrumentation("my-app-id", {
-    loggers,
-    verbose: true
-})
-
-// IMPORTANT: register Honeycomb before Squide to capture bootstrapping logs.
-registerHoneycombInstrumentation("sample", "my-app-id", [/.+/g,], {
-    proxy: "https://sample-proxy",
-    loggers,
-    verbose: true
-});
-
-initializeMixpanel("wlp", "development", {
-    loggers,
-    verbose: true
+const telemetryClient = initializeTelemetry({
+    logRocket: {
+        appId: "my-app-id"
+    },
+    honeycomb: {
+        namespace: "sample",
+        serviceName: "my-app",
+        apiServiceUrls: [/.+/g],
+        options: {
+            proxy: "https://sample-proxy"
+        }
+    },
+    mixpanel: {
+        productId: "wlp",
+        envOrTrackingApiBaseUrl: "development"
+    },
+    verbose: true,
+    loggers
 });
 
 registerCommonRoomInstrumentation("my-site-id", {
-    loggers,
-    verbose: true
+    verbose: true,
+    loggers
 });
 
 // IMPORTANT: Squide loggers are propagated to platform widgets under the hood.
@@ -188,7 +195,9 @@ const root = createRoot(document.getElementById("root")!);
 
 root.render(
     <FireflyProvider runtime={runtime}>
-        <App />
+        <TelemetryProvider client={telemetryClient}>
+            <App />
+        </TelemetryProvider>
     </FireflyProvider>
 );
 ```

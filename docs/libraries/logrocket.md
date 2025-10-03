@@ -1,5 +1,5 @@
 ---
-order: 60
+order: 50
 label: "LogRocket"
 redirect: https://workleap.github.io/wl-telemetry/logrocket/getting-started/
 ---
