@@ -13,7 +13,7 @@ Name | Documentation
 Squide | [Guide](https://workleap.github.io/wl-squide/guides/use-loggers/)
 Platform widgets | [Guide](https://dev.azure.com/workleap/WorkleapPlatform/_git/workleap-platform-widgets?path=/docs/user/usage/loggers.md&_a=preview)
 Telemetry | [Reference](https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers)
-Common Room | [Reference](https://workleap.github.io/wl-telemetry/common-room/reference/registercommonroominstrumentation/#loggers)
+Common Room | [Reference](https://workleap.github.io/wl-telemetry/reference/common-room/registercommonroominstrumentation/#use-loggers)
 
 ## Log levels
 
