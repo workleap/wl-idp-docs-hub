@@ -10,8 +10,8 @@ The following libraries integrate with loggers that implement the RootLogger int
 
 Name | Documentation
 ---  | ---
-Squide | [Guide](https://workleap.github.io/wl-squide/guides/use-loggers/)
-Platform widgets | [Guide](https://dev.azure.com/workleap/WorkleapPlatform/_git/workleap-platform-widgets?path=/docs/user/usage/loggers.md&_a=preview)
+Squide | [Guide](https://workleap.github.io/wl-squide/integrations/setup-logger/#capture-logs-in-logrocket)
+Platform widgets | [Guide](https://github.com/workleap/wlp-platform-widgets/blob/main/docs/user/usage/loggers.md)
 Telemetry | [Reference](https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers)
 Common Room | [Reference](https://workleap.github.io/wl-telemetry/reference/common-room/registercommonroominstrumentation/#use-loggers)
 
