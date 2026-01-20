@@ -19,12 +19,12 @@
         "update-outdated-deps": "pnpm update --latest"
     },
     "devDependencies": {
-        "@eslint/js": "9.38.0",
-        "@workleap/eslint-configs": "1.1.0",
-        "eslint": "9.38.0",
+        "@eslint/js": "9.39.2",
+        "@workleap/eslint-configs": "1.1.10",
+        "eslint": "9.39.2",
         "retypeapp": "3.11.0",
         "typescript": "5.9.3",
-        "typescript-eslint": "8.46.2"
+        "typescript-eslint": "8.53.1"
     },
     "packageManager": "pnpm@10.20.0"
 }
