@@ -77,6 +77,7 @@ Let agents control and inspect a live Chrome browser. Useful for automation, in-
 Description | Agent skill | MCP server {.agent-extensions-first-column}
 ---  | --- | ---
 Workleap Chromatic best practices | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
 
 
 
