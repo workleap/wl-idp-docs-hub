@@ -12,7 +12,7 @@ Agents can be extended with **additional capabilities** to interact with tools, 
 
 Below is a non-exhaustive list of agent extensions we currently recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies evolve.
 
-Some libraries provide both an agent skill and an MCP server integration. When an **agent skill** is available, we generally **recommend using it** rather than it's MCP server counterpart, as it avoids additional protocol overhead and reduces token usage.
+Some libraries provide both an agent skill and an MCP server integration. When an **agent skill** is available, we generally **recommend using it** rather than its MCP server counterpart, as it avoids additional protocol overhead and reduces token usage.
 
 :point_right: To propose a new agent skill or MCP server, [open an issue on GitHub](https://github.com/workleap/wl-idp-docs-hub/issues).
 
