@@ -53,7 +53,7 @@ Failure surface area | Smaller | Larger |
 
 ### Code extensions
 
-Description | Agent skill | MCP server {.agent-extensions-first-column}
+Description | Agent skill | MCP server {.agent-extensions}
 ---  | --- | ---
 Agent extensions for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | [workleap/wl-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#setup-context7-mcp-server) [!badge text="context7" size="xs"] |
 Agent extensions for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | [workleap/wl-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#setup-context7-mcp-server) [!badge text="context7" size="xs"] |
@@ -68,13 +68,13 @@ Comprehensive accessibility guidelines based on [WCAG 2.1](https://www.w3.org/TR
 
 ### Debug & inspection extensions
 
-Description | Agent skill | MCP server {.agent-extensions-first-column}
+Description | Agent skill | MCP server {.agent-extensions}
 ---  | --- | ---
 Let agents control and inspect a live Chrome browser. Useful for automation, in-depth debugging, and performance analysis. | - | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp?tab=readme-ov-file#getting-started) |
 
 ### Audit extensions
 
-Description | Agent skill | MCP server {.agent-extensions-first-column}
+Description | Agent skill | MCP server {.agent-extensions}
 ---  | --- | ---
 Workleap Chromatic best practices | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
 Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
