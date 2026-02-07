@@ -12,11 +12,11 @@ Agents can be extended with **additional capabilities** to interact with tools, 
 
 Below is a non-exhaustive list of agent extensions we currently recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies evolve.
 
-Some libraries provide both an agent skill and an MCP server integration. When an **agent skill** is available, we generally **recommend using it** rather than its MCP server counterpart, as it avoids additional protocol overhead and reduces token usage.
+Some libraries provide both an agent skill and an MCP integration. When an **agent skill** is available, we generally **recommend using it** rather than its MCP counterpart, as it avoids additional protocol overhead and reduces token usage.
 
-:point_right: To propose a new agent skill or MCP server, [open an issue on GitHub](https://github.com/workleap/wl-idp-docs-hub/issues).
+:point_right: To propose a new agent skill or MCP, [open an issue on GitHub](https://github.com/workleap/wl-idp-docs-hub/issues).
 
-==- Key differences between agent skills and MCP servers
+==- Key differences between agent skills and MCP
 
 **Agent skills**
 
@@ -28,7 +28,7 @@ They are typically used to:
 - Minimize token consumption by not requiring round-trips to external services
 - Expose shared libraries and utilities directly to the agent (for example, logging or telemetry)
 
-**MCP servers**
+**MCP**
 
 _Out-of-process_ extensions that communicate with the agent over a protocol boundary.
 
@@ -40,7 +40,7 @@ They are typically used to:
 
 **Comparison**
 
-Requirement / constraint | Agent skills | MCP servers {.compact}
+Requirement / constraint | Agent skills | MCP {.compact}
 ---  | :---: | :---:
 Executes in agent runtime | :icon-check: | |
 Requires external protocol or round-trip | | :icon-check: |
@@ -53,7 +53,7 @@ Failure surface area | Smaller | Larger |
 
 ### Coding agent extensions
 
-Description | Agent skill | MCP server {.agent-extensions}
+Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Agent extensions for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
@@ -69,7 +69,7 @@ Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo
 
 ### Code review extensions
 
-Description | Agent skill | MCP server {.agent-extensions}
+Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Agent extension for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extension for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
@@ -84,13 +84,13 @@ Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo
 
 ### Debug & inspection extensions
 
-Description | Agent skill | MCP server {.agent-extensions}
+Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Let agents control and inspect a live Chrome browser. Useful for automation, in-depth debugging, and performance analysis. | - | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp?tab=readme-ov-file#getting-started) |
 
 ### Audit extensions
 
-Description | Agent skill | MCP server {.agent-extensions}
+Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices. | [web-quality-skills/web-quality-audit](https://skills.sh/addyosmani/web-quality-skills/web-quality-audit) | - |
 Workleap Chromatic best practices | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
