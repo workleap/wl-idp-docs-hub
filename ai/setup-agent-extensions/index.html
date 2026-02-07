@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.823402259621">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.823748173502">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -32,11 +32,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.823402259621" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.823748173502" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.823402259621" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.823748173502" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.823402259621" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.823748173502" data-turbo-eval="false" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -233,10 +233,10 @@
     </h2>
 </doc-anchor-target>
 <p>Below is a non-exhaustive list of agent extensions we currently recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies evolve.</p>
-<p>Some libraries provide both an agent skill and an MCP server integration. When an <strong>agent skill</strong> is available, we generally <strong>recommend using it</strong> rather than its MCP server counterpart, as it avoids additional protocol overhead and reduces token usage.</p>
-<p><span class="docs-emoji">&#x1F449;</span> To propose a new agent skill or MCP server, <a href="https://github.com/workleap/wl-idp-docs-hub/issues" class="outbound" target="_blank">open an issue on GitHub</a>.</p>
-<doc-panel id="key-differences-between-agent-skills-and-mcp-servers" collapsed>
-    <template #title>Key differences between agent skills and MCP servers</template>
+<p>Some libraries provide both an agent skill and an MCP integration. When an <strong>agent skill</strong> is available, we generally <strong>recommend using it</strong> rather than its MCP counterpart, as it avoids additional protocol overhead and reduces token usage.</p>
+<p><span class="docs-emoji">&#x1F449;</span> To propose a new agent skill or MCP, <a href="https://github.com/workleap/wl-idp-docs-hub/issues" class="outbound" target="_blank">open an issue on GitHub</a>.</p>
+<doc-panel id="key-differences-between-agent-skills-and-mcp" collapsed>
+    <template #title>Key differences between agent skills and MCP</template>
 <p><strong>Agent skills</strong></p>
 <p><em>In-process</em> extensions that run in the same runtime as the agent.</p>
 <p>They are typically used to:</p>
@@ -245,7 +245,7 @@
 <li>Minimize token consumption by not requiring round-trips to external services</li>
 <li>Expose shared libraries and utilities directly to the agent (for example, logging or telemetry)</li>
 </ul>
-<p><strong>MCP servers</strong></p>
+<p><strong>MCP</strong></p>
 <p><em>Out-of-process</em> extensions that communicate with the agent over a protocol boundary.</p>
 <p>They are typically used to:</p>
 <ul>
@@ -260,7 +260,7 @@
 <tr>
 <th>Requirement / constraint</th>
 <th style="text-align: center;">Agent skills</th>
-<th style="text-align: center;">MCP servers</th>
+<th style="text-align: center;">MCP</th>
 </tr>
 </thead>
 <tbody>
@@ -303,10 +303,10 @@
 </table>
 </div>
 </doc-panel>
-<doc-anchor-target id="code-extensions">
+<doc-anchor-target id="coding-agent-extensions">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#code-extensions">#</doc-anchor-trigger>
-        <span>Code extensions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#coding-agent-extensions">#</doc-anchor-trigger>
+        <span>Coding agent extensions</span>
     </h3>
 </doc-anchor-target>
 <div class="table-wrapper scrollbar overflow-hidden">
@@ -315,34 +315,39 @@
 <tr>
 <th>Description</th>
 <th>Agent skill</th>
-<th>MCP server</th>
+<th>MCP</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Agent extensions for Squide.</td>
 <td><a href="https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill" class="outbound" target="_blank">workleap-squide</a></td>
-<td><a href="https://workleap.github.io/wl-squide/introduction/use-with-agents/#setup-context7-mcp-server" class="outbound" target="_blank">workleap/wl-squide</a></td>
+<td>-</td>
 </tr>
 <tr>
 <td>Agent extensions for web configs libraries.</td>
 <td><a href="https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills" class="outbound" target="_blank">workleap-web-configs</a></td>
-<td><a href="https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#setup-context7-mcp-server" class="outbound" target="_blank">workleap/wl-web-configs</a></td>
+<td>-</td>
 </tr>
 <tr>
 <td>Agent extensions for telemetry libraries.</td>
 <td><a href="https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill" class="outbound" target="_blank">workleap-telemetry</a></td>
-<td><a href="https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#setup-context7-mcp-server" class="outbound" target="_blank">workleap/wl-telemetry</a></td>
+<td>-</td>
 </tr>
 <tr>
 <td>Agent extensions for logging libraries.</td>
 <td><a href="https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill" class="outbound" target="_blank">workleap-logging</a></td>
-<td><a href="https://workleap.github.io/wl-logging/introduction/use-with-agents/#setup-context7-mcp-server" class="outbound" target="_blank">workleap/wl-logging</a></td>
+<td>-</td>
 </tr>
 <tr>
 <td>Agent extensions for Hopper.</td>
 <td>-</td>
 <td><a href="https://hopper.workleap.design/getting-started/ai-for-agents/mcp-server" class="outbound" target="_blank">hopper.workleap.design/mcp</a></td>
+</tr>
+<tr>
+<td>Agent extension for React Aria.</td>
+<td><a href="https://skills.sh/adobe/com/react-aria" class="outbound" target="_blank">adobe/com/react-aria</a></td>
+<td>-</td>
 </tr>
 <tr>
 <td>Performance optimization based on Lighthouse performance audits. Focuses on loading speed, runtime efficiency, and resource optimization.</td>
@@ -360,13 +365,82 @@
 <td>-</td>
 </tr>
 <tr>
-<td>Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices.</td>
-<td><a href="https://skills.sh/addyosmani/web-quality-skills/web-quality-audit" class="outbound" target="_blank">web-quality-skills/web-quality-audit</a></td>
+<td>Comprehensive accessibility guidelines based on <a href="https://www.w3.org/TR/WCAG21/" class="outbound" target="_blank">WCAG 2.1</a> and Lighthouse accessibility audits.</td>
+<td><a href="https://skills.sh/addyosmani/web-quality-skills/accessibility" class="outbound" target="_blank">web-quality-skills/accessibility</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Turborepo best practices</td>
+<td><a href="https://skills.sh/vercel/turborepo/turborepo" class="outbound" target="_blank">vercel/turborepo</a></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="code-review-extensions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#code-review-extensions">#</doc-anchor-trigger>
+        <span>Code review extensions</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable agent-extensions">
+<thead>
+<tr>
+<th>Description</th>
+<th>Agent skill</th>
+<th>MCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent extension for Squide.</td>
+<td><a href="https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill" class="outbound" target="_blank">workleap-squide</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Agent extension for web configs libraries.</td>
+<td><a href="https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills" class="outbound" target="_blank">workleap-web-configs</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Agent extension for telemetry libraries.</td>
+<td><a href="https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill" class="outbound" target="_blank">workleap-telemetry</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Agent extension for logging libraries.</td>
+<td><a href="https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill" class="outbound" target="_blank">workleap-logging</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Agent extension for React Aria.</td>
+<td><a href="https://skills.sh/adobe/com/react-aria" class="outbound" target="_blank">adobe/com/react-aria</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Performance optimization based on Lighthouse performance audits. Focuses on loading speed, runtime efficiency, and resource optimization.</td>
+<td><a href="https://skills.sh/addyosmani/web-quality-skills/performance" class="outbound" target="_blank">web-quality-skills/performance</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Targeted optimization for the three Core Web Vitals metrics that affect Google Search ranking and user experience.</td>
+<td><a href="https://skills.sh/addyosmani/web-quality-skills/core-web-vitals" class="outbound" target="_blank">web-quality-skills/core-web-vitals</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Modern web development standards based on Lighthouse best practices audits. Covers security, browser compatibility, and code quality patterns.</td>
+<td><a href="https://skills.sh/addyosmani/web-quality-skills/best-practices" class="outbound" target="_blank">web-quality-skills/best-practices</a></td>
 <td>-</td>
 </tr>
 <tr>
 <td>Comprehensive accessibility guidelines based on <a href="https://www.w3.org/TR/WCAG21/" class="outbound" target="_blank">WCAG 2.1</a> and Lighthouse accessibility audits.</td>
 <td><a href="https://skills.sh/addyosmani/web-quality-skills/accessibility" class="outbound" target="_blank">web-quality-skills/accessibility</a></td>
+<td>-</td>
+</tr>
+<tr>
+<td>Turborepo best practices</td>
+<td><a href="https://skills.sh/vercel/turborepo/turborepo" class="outbound" target="_blank">vercel/turborepo</a></td>
 <td>-</td>
 </tr>
 </tbody>
@@ -384,7 +458,7 @@
 <tr>
 <th>Description</th>
 <th>Agent skill</th>
-<th>MCP server</th>
+<th>MCP</th>
 </tr>
 </thead>
 <tbody>
@@ -408,18 +482,18 @@
 <tr>
 <th>Description</th>
 <th>Agent skill</th>
-<th>MCP server</th>
+<th>MCP</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Workleap Chromatic best practices</td>
-<td><a href="https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills" class="outbound" target="_blank">workleap-chromatic-best-practices</a></td>
+<td>Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices.</td>
+<td><a href="https://skills.sh/addyosmani/web-quality-skills/web-quality-audit" class="outbound" target="_blank">web-quality-skills/web-quality-audit</a></td>
 <td>-</td>
 </tr>
 <tr>
-<td>Turborepo best practices</td>
-<td><a href="https://skills.sh/vercel/turborepo/turborepo" class="outbound" target="_blank">vercel/turborepo</a></td>
+<td>Workleap Chromatic best practices</td>
+<td><a href="https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills" class="outbound" target="_blank">workleap-chromatic-best-practices</a></td>
 <td>-</td>
 </tr>
 </tbody>
