@@ -51,7 +51,7 @@ Access to external systems | | :icon-check: |
 Failure surface area | Smaller | Larger |
 ===
 
-### Coding agent extensions
+### Code generation extensions
 
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
@@ -94,6 +94,7 @@ Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices. | [web-quality-skills/web-quality-audit](https://skills.sh/addyosmani/web-quality-skills/web-quality-audit) | - |
 Workleap Chromatic best practices | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
 
 
 
