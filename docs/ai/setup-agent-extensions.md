@@ -51,20 +51,36 @@ Access to external systems | | :icon-check: |
 Failure surface area | Smaller | Larger |
 ===
 
-### Code extensions
+### Coding agent extensions
 
 Description | Agent skill | MCP server {.agent-extensions}
 ---  | --- | ---
-Agent extensions for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | [workleap/wl-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#setup-context7-mcp-server) |
-Agent extensions for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | [workleap/wl-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#setup-context7-mcp-server) |
-Agent extensions for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | [workleap/wl-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#setup-context7-mcp-server) |
-Agent extensions for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | [workleap/wl-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#setup-context7-mcp-server) |
+Agent extensions for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extensions for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Agent extensions for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extensions for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for Hopper. | - | [hopper.workleap.design/mcp](https://hopper.workleap.design/getting-started/ai-for-agents/mcp-server) |
+Agent extension for React Aria. | [adobe/com/react-aria](https://skills.sh/adobe/com/react-aria) | - |
 Performance optimization based on Lighthouse performance audits. Focuses on loading speed, runtime efficiency, and resource optimization. | [web-quality-skills/performance](https://skills.sh/addyosmani/web-quality-skills/performance) | - |
 Targeted optimization for the three Core Web Vitals metrics that affect Google Search ranking and user experience. | [web-quality-skills/core-web-vitals](https://skills.sh/addyosmani/web-quality-skills/core-web-vitals) | - |
 Modern web development standards based on Lighthouse best practices audits. Covers security, browser compatibility, and code quality patterns. | [web-quality-skills/best-practices](https://skills.sh/addyosmani/web-quality-skills/best-practices) | - |
-Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices. | [web-quality-skills/web-quality-audit](https://skills.sh/addyosmani/web-quality-skills/web-quality-audit) | - |
 Comprehensive accessibility guidelines based on [WCAG 2.1](https://www.w3.org/TR/WCAG21/) and Lighthouse accessibility audits. | [web-quality-skills/accessibility](https://skills.sh/addyosmani/web-quality-skills/accessibility) | - |
+Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
+
+### Code review extensions
+
+Description | Agent skill | MCP server {.agent-extensions}
+---  | --- | ---
+Agent extension for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extension for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Agent extension for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extension for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extension for React Aria. | [adobe/com/react-aria](https://skills.sh/adobe/com/react-aria) | - |
+Performance optimization based on Lighthouse performance audits. Focuses on loading speed, runtime efficiency, and resource optimization. | [web-quality-skills/performance](https://skills.sh/addyosmani/web-quality-skills/performance) | - |
+Targeted optimization for the three Core Web Vitals metrics that affect Google Search ranking and user experience. | [web-quality-skills/core-web-vitals](https://skills.sh/addyosmani/web-quality-skills/core-web-vitals) | - |
+Modern web development standards based on Lighthouse best practices audits. Covers security, browser compatibility, and code quality patterns. | [web-quality-skills/best-practices](https://skills.sh/addyosmani/web-quality-skills/best-practices) | - |
+Comprehensive accessibility guidelines based on [WCAG 2.1](https://www.w3.org/TR/WCAG21/) and Lighthouse accessibility audits. | [web-quality-skills/accessibility](https://skills.sh/addyosmani/web-quality-skills/accessibility) | - |
+Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
 
 ### Debug & inspection extensions
 
@@ -76,8 +92,8 @@ Let agents control and inspect a live Chrome browser. Useful for automation, in-
 
 Description | Agent skill | MCP server {.agent-extensions}
 ---  | --- | ---
+Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices. | [web-quality-skills/web-quality-audit](https://skills.sh/addyosmani/web-quality-skills/web-quality-audit) | - |
 Workleap Chromatic best practices | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
-Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
 
 
 
