@@ -159,7 +159,11 @@ The previous workflow does not use the [code-review](https://github.com/anthropi
 
 ## Install agent skills
 
-Finally, using [skills.sh](https://skills.sh/), install into the repository the the agent skills listed in the `AGENTS.md` file.
+Finally, using [skills.sh](https://skills.sh/), install into the repository the agent skills listed in the `AGENTS.md` file.
+
+:::align-image-left
+![Examples of locally installed agent skills](../static/installed-agent-skills.png){width=220}
+:::
 
 ## Try it :rocket:
 
