@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.823794897537">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.823924215150">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Setup code review workflow</title>
     <meta name="title" content="Setup code review workflow">
+    <meta name="description" content="Review agents can be extended with additional capabilities to better understand your coding tools and libraries.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://workleap.github.io/wl-idp-docs-hub/ai/setup-code-review-workflow/">
@@ -20,20 +21,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://workleap.github.io/wl-idp-docs-hub/ai/setup-code-review-workflow/">
     <meta property="og:title" content="Setup code review workflow">
+    <meta property="og:description" content="Review agents can be extended with additional capabilities to better understand your coding tools and libraries.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://workleap.github.io/wl-idp-docs-hub/ai/setup-code-review-workflow/">
     <meta property="twitter:title" content="Setup code review workflow">
+    <meta property="twitter:description" content="Review agents can be extended with additional capabilities to better understand your coding tools and libraries.">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../static/favicon.png" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0.823794897537" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.823924215150" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.823794897537" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.823924215150" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.823794897537" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.823924215150" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0.823924215150" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -197,6 +201,24 @@
                             <div class="retype-markdown" id="retype-content">
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
+                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                                    <ol role="list">
+                                        <li class="pr-4">
+                                            <span class="pr-4">
+                                                Ai
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../ai/setup-code-review-workflow/" class="pr-4">
+                                                Setup code review workflow
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </nav>
+                
                                 <!-- Page content  -->
 <doc-anchor-target id="setup-code-review-workflow" class="break-words">
     <h1>
@@ -204,6 +226,175 @@
         <span>Setup code review workflow</span>
     </h1>
 </doc-anchor-target>
+<p>Review agents can be extended with additional capabilities to better understand your coding tools and libraries. This guide describes a basic setup for configuring review agents to use agent skills and improve the code review workflow.</p>
+<doc-anchor-target id="choosing-an-agent">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#choosing-an-agent">#</doc-anchor-trigger>
+        <span>Choosing an agent</span>
+    </h2>
+</doc-anchor-target>
+<p>After several <a href="https://github.com/workleap/wl-agents-code-review-poc" class="outbound" target="_blank">rounds of testing</a>, the current recommendation is to use one, or both, of the following agents:</p>
+<ul>
+<li><a href="https://copilot.microsoft.com/" class="outbound" target="_blank">Copilot</a>, due to its ease of configuration, consistent issue detection, and well-structured reporting format.</li>
+<li><a href="https://code.claude.com/docs/en/overview" class="outbound" target="_blank">Claude Code</a>, without the <a href="https://github.com/anthropics/claude-code/blob/main/plugins/code-review/README.md" class="outbound" target="_blank">code-review</a> plugin, for faster execution times and access to newer AI features.</li>
+</ul>
+<p>To enhance the code review workflow with agent skills, complete the following steps <span class="docs-emoji">&#x1F447;</span></p>
+<doc-anchor-target id="create-an-agent-file">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-an-agent-file">#</doc-anchor-trigger>
+        <span>Create an agent file</span>
+    </h2>
+</doc-anchor-target>
+<p>First, create an <code v-pre>AGENTS.md</code> file at the root of the workspace or update an existing agent file with the following content:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">AGENTS.md</div>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">## Code Review Instructions
+
+### Agent skills
+
+During code reviews, load and apply agent skills from the `./.agents/skills` folder as described below.
+
+#### Always apply
+
+Apply these skills to every changed line in `.ts`, `.tsx`, `.js`, and `.jsx` files:
+
+* `/accessibility`
+* `/best-practices`
+* `/core-web-vitals`
+* `/performance`
+
+#### Apply based on imports
+
+Apply the following skills to changed lines only, based on detected imports:
+
+* Files importing `@squide/*` → `/workleap-squide`
+* Files importing `@workleap/logging` → `/workleap-logging`
+* Files importing `@workleap/telemetry` → `/workleap-telemetry`
+* Files importing
+  `@workleap/browserslist-config`,
+  `@workleap/eslint-configs`,
+  `@workleap/stylelint-plugin`,
+  `@workleap/typescript-configs`,
+  `@workleap/rsbuild-configs`,
+  `@workleap/rslib-configs`
+  → `/workleap-web-configs`
+* Files importing `react-aria-components` → `react-aria`
+
+#### Apply based on file name or type
+
+* `turbo.json` → `/turborepo`
+
+### Issue reporting
+
+When reporting issues:
+
+* If an issue corresponds to a specific agent skill or a custom guideline, reference it explicitly.
+* Otherwise, assign the issue to the most relevant category based on its nature.</code></pre>
+</doc-codeblock></div>
+<p>Then, update the <a href="https://workleap.github.io/wl-idp-docs-hub/ai/setup-agent-extensions/" class="outbound" target="_blank">agent skills</a> to align with the project&#x27;s technology stack.</p>
+<doc-anchor-target id="setup-copilot">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-copilot">#</doc-anchor-trigger>
+        <span>Setup Copilot</span>
+    </h2>
+</doc-anchor-target>
+<p>When using Copilot, add a &#x60;.github/copilot-instructions.md file and include the content below:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">.github/copilot-instructions.md</div>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">This repository's instructions are defined in the root `AGENTS.md` file. GitHub Copilot and any other tools that read `.github/copilot-instructions.md` should treat `AGENTS.md` as the single source of truth.</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="setup-claude-code">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-claude-code">#</doc-anchor-trigger>
+        <span>Setup Claude Code</span>
+    </h2>
+</doc-anchor-target>
+<p>When using Claude Code, first create a <code v-pre>CLAUDE.md</code> file at the root of the workspace with the following content:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">CLAUDE.md</div>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">This repository's instructions are defined in the root `AGENTS.md` file. Claude Code and any other tools that read `CLAUDE.md` should treat `AGENTS.md` as the single source of truth.</code></pre>
+</doc-codeblock></div>
+<p>Then, create a <code v-pre>.github/workflows/claude-code-review.yml</code> file with the following content:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<div class="codeblock-title">.github/workflows/claude-code-review.yml</div>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">name: Claude Code Review
+
+concurrency:
+  group: claude-code-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches: [&quot;main&quot;]
+    types: [opened, synchronize, ready_for_review, reopened]
+
+jobs:
+  claude-review:
+    # Skip drafts.
+    if: ${{ !github.event.pull_request.draft }}
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      # Required for OIDC authentication: https://github.com/anthropics/claude-code-action/blob/main/docs/faq.md#why-am-i-getting-oidc-authentication-errors.
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          # Provides better git history context than &quot;1&quot;.
+          fetch-depth: 0
+
+      - name: Run Claude Code Review
+        id: claude-review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            REPO: ${{ github.repository }}
+
+            Review PR #${{ github.event.pull_request.number }} for bugs, security issues, and code quality problems.
+            Get the diff: gh pr diff ${{ github.event.pull_request.number }}
+
+            IMPORTANT:
+            - You must read and follow the review instructions defined in the root AGENTS.md file.
+
+            RULES:
+            - Only report definite issues introduced by this change (not pre-existing ones).
+            - Every reported issue must include a clear fix, with the file path and line number.
+            - Skip style preferences, minor nitpicks, and issues typically caught by linters.
+            - Do not include positive feedback; focus only on problems.
+
+            SEVERITY:
+            - Critical (data loss/security breach), High (incorrect behavior), Medium (conditional issues), Low (minor/typos).
+
+            REPORTING:
+            - All issues must be reported as inline pull request comments using GitHub MCP.
+          claude_args: &gt;-
+            --allowed-tools
+            &quot;Read,Write,Grep,Glob,Skill,Task,
+             Bash(gh pr *),
+             mcp__github_inline_comment__*,
+             mcp__hopper__*&quot;</code></pre>
+</doc-codeblock></div>
+<p>Then, add <code v-pre>ANTHROPIC_API_KEY</code> as a secret of the GitHub repository.</p>
+<doc-anchor-target id="install-agent-skills">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#install-agent-skills">#</doc-anchor-trigger>
+        <span>Install agent skills</span>
+    </h2>
+</doc-anchor-target>
+<p>Finally, using <a href="https://skills.sh/" class="outbound" target="_blank">skills.sh</a>, install into the repository the the agent skills listed in the <code v-pre>AGENTS.md</code> file.</p>
+<doc-anchor-target id="try-it-rocket">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#try-it-rocket">#</doc-anchor-trigger>
+        <span>Try it <span class="docs-emoji">&#x1F680;</span></span>
+    </h2>
+</doc-anchor-target>
+<p>Deliberately add changes that should trigger the installed agent skills, then open a pull request. The review agent should report issues as inline comments on the pull request.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -217,6 +408,27 @@
                                     </a>
                                 </div>
                             
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ai/setup-agent-extensions/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                                <span class="block mt-1">Setup agent extensions</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../guides/use-loggers/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                                <span class="block mt-1">Use loggers</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
                             </footer>
                         </main>
                 
@@ -255,6 +467,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Setup code review workflow", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Setup code review workflow", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
