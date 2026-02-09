@@ -151,7 +151,11 @@ jobs:
              mcp__hopper__*"
 ```
 
-Then, add `ANTHROPIC_API_KEY` as a secret of the GitHub repository.
+Then, add `ANTHROPIC_API_KEY` as a [KeyVault secret](https://workleap.atlassian.net/wiki/spaces/TL/pages/5211226436/How+to+use+managed+secrets+in+your+pipeline) or a [GitHub action secret](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
+
+!!!info
+The previous workflow does not use the [code-review](https://github.com/anthropics/claude-code/blob/main/plugins/code-review/README.md) plugin. Our tests showed that enabling the plugin often results in reviews costing above $4 per pull request. This is because the plugin creates a pool of four agents that work together to review the changes. Our testing indicates that acceptable review quality can be achieved without the plugin, at a lower cost.
+!!!
 
 ## Install agent skills
 
@@ -160,4 +164,3 @@ Finally, using [skills.sh](https://skills.sh/), install into the repository the 
 ## Try it :rocket:
 
 Deliberately add changes that should trigger the installed agent skills, then open a pull request. The review agent should report issues as inline comments on the pull request.
-
