@@ -147,8 +147,7 @@ jobs:
             --allowed-tools
             "Read,Write,Grep,Glob,Skill,Task,
              Bash(gh pr *),
-             mcp__github_inline_comment__*,
-             mcp__hopper__*"
+             mcp__github_inline_comment__*"
 ```
 
 Then, add `ANTHROPIC_API_KEY` as a [KeyVault secret](https://workleap.atlassian.net/wiki/spaces/TL/pages/5211226436/How+to+use+managed+secrets+in+your+pipeline) or a [GitHub action secret](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
