@@ -12,7 +12,7 @@ Agents can be extended with **additional capabilities** to interact with tools, 
 
 Below is a non-exhaustive list of agent extensions we currently recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies evolve.
 
-:point_right: To propose a new agent skill or MCP, [open an issue on GitHub](https://github.com/workleap/wl-idp-docs-hub/issues).
+:point_right: To propose a new agent skill or MCP, [open an issue](https://github.com/workleap/wl-idp-docs-hub/issues) on GitHub.
 
 ==- Key differences between agent skills and MCP
 
@@ -59,6 +59,7 @@ Agent extensions for telemetry libraries. | [workleap-telemetry](https://worklea
 Agent extensions for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for Hopper. | - | [hopper.workleap.design/mcp](https://hopper.workleap.design/getting-started/ai-for-agents/mcp-server) |
 Agent extension for React Aria. | [adobe/com/react-aria](https://skills.sh/adobe/com/react-aria) | - |
+Agent extension for Vitest. | [antfu/skills/vitest](https://skills.sh/antfu/skills/vitest) | - |
 Performance optimization based on Lighthouse performance audits. Focuses on loading speed, runtime efficiency, and resource optimization. | [web-quality-skills/performance](https://skills.sh/addyosmani/web-quality-skills/performance) | - |
 Targeted optimization for the three Core Web Vitals metrics that affect Google Search ranking and user experience. | [web-quality-skills/core-web-vitals](https://skills.sh/addyosmani/web-quality-skills/core-web-vitals) | - |
 Modern web development standards based on Lighthouse best practices audits. Covers security, browser compatibility, and code quality patterns. | [web-quality-skills/best-practices](https://skills.sh/addyosmani/web-quality-skills/best-practices) | - |
