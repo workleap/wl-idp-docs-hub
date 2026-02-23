@@ -57,6 +57,7 @@ Agent extensions for Squide. | [workleap-squide](https://workleap.github.io/wl-s
 Agent extensions for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
 Agent extensions for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extensions for React. | [workleap-react-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
 Agent extensions for Hopper. | - | [hopper.workleap.design/mcp](https://hopper.workleap.design/getting-started/ai-for-agents/mcp-server) |
 Agent extension for React Aria. | [adobe/com/react-aria](https://skills.sh/adobe/com/react-aria) | - |
 Agent extension for Vitest. | [antfu/skills/vitest](https://skills.sh/antfu/skills/vitest) | - |
@@ -64,7 +65,7 @@ Performance optimization based on Lighthouse performance audits. Focuses on load
 Targeted optimization for the three Core Web Vitals metrics that affect Google Search ranking and user experience. | [web-quality-skills/core-web-vitals](https://skills.sh/addyosmani/web-quality-skills/core-web-vitals) | - |
 Modern web development standards based on Lighthouse best practices audits. Covers security, browser compatibility, and code quality patterns. | [web-quality-skills/best-practices](https://skills.sh/addyosmani/web-quality-skills/best-practices) | - |
 Comprehensive accessibility guidelines based on [WCAG 2.1](https://www.w3.org/TR/WCAG21/) and Lighthouse accessibility audits. | [web-quality-skills/accessibility](https://skills.sh/addyosmani/web-quality-skills/accessibility) | - |
-Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
+Turborepo best practices. | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
 
 ### Code review extensions
 
@@ -74,28 +75,34 @@ Agent extension for Squide. | [workleap-squide](https://workleap.github.io/wl-sq
 Agent extension for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
 Agent extension for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extension for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
+Agent extensions for React. | [workleap-react-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
 Agent extension for React Aria. | [adobe/com/react-aria](https://skills.sh/adobe/com/react-aria) | - |
 Performance optimization based on Lighthouse performance audits. Focuses on loading speed, runtime efficiency, and resource optimization. | [web-quality-skills/performance](https://skills.sh/addyosmani/web-quality-skills/performance) | - |
 Targeted optimization for the three Core Web Vitals metrics that affect Google Search ranking and user experience. | [web-quality-skills/core-web-vitals](https://skills.sh/addyosmani/web-quality-skills/core-web-vitals) | - |
 Modern web development standards based on Lighthouse best practices audits. Covers security, browser compatibility, and code quality patterns. | [web-quality-skills/best-practices](https://skills.sh/addyosmani/web-quality-skills/best-practices) | - |
 Comprehensive accessibility guidelines based on [WCAG 2.1](https://www.w3.org/TR/WCAG21/) and Lighthouse accessibility audits. | [web-quality-skills/accessibility](https://skills.sh/addyosmani/web-quality-skills/accessibility) | - |
-Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
+Turborepo best practices. | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
+PNPM best practices. | [antfu/skills/pnpm](https://skills.sh/antfu/skills/pnpm) | - |
 
 ### Debug & inspection extensions
 
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Let agents control and inspect a live Chrome browser. Useful for automation, in-depth debugging, and performance analysis. | - | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp?tab=readme-ov-file#getting-started) |
+Help the agent query the LogRocket highlights API to retrieve user session information, behavior data, and answer questions about user activity. | - | [@logrocket/mcp](https://www.npmjs.com/package/@logrocket/mcp)
 
 ### Audit extensions
 
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Comprehensive quality review based on Google Lighthouse audits. Covers performance, accessibility, SEO, and best practices. | [web-quality-skills/web-quality-audit](https://skills.sh/addyosmani/web-quality-skills/web-quality-audit) | - |
-Workleap Chromatic best practices | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
-Turborepo best practices | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
+Workleap React best practices. | [workleap-react-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Workleap Chromatic best practices. | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Turborepo best practices. | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
+PNPM best practices. | [antfu/skills/pnpm](https://skills.sh/antfu/skills/pnpm) | - |
 
+### Others
 
-
-
-
+Description | Agent skill | MCP {.agent-extensions}
+---  | --- | ---
+Agent extensions for the `agent-browser` CLI | [vercel-labs/agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | - |
