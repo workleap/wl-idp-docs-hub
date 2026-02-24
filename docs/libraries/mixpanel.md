@@ -1,5 +1,5 @@
 ---
 order: 30
-label: "Mixpanel"
+label: Mixpanel
 redirect: https://workleap.github.io/wl-telemetry
 ---

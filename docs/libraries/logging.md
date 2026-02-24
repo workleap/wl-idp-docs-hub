@@ -1,5 +1,5 @@
 ---
 order: 9
-label: "Logging"
+label: Logging
 redirect: https://workleap.github.io/wl-logging
 ---

@@ -1,168 +1,125 @@
 ---
 order: 190
-toc:
-    depth: 2-3
+label: Setup code review workflow
 ---
 
-# Setup code review workflow
+# Setup a code review workflow
 
-Review agents can be extended with additional capabilities to better understand your coding tools and libraries. This guide describes a basic setup for configuring review agents to use agent skills and improve the code review workflow.
+Review agents can be extended with additional capabilities to better understand your tools, frameworks, and internal libraries. This guide explains how to create a [GitHub Action](https://github.com/features/actions) that uses [Claude Code](https://code.claude.com/) and [agent skills](https://agentskills.io/home) to automate code reviews.
 
-## Choosing an agent
+>:icon-mark-github: For a complete example of this workflow, refer to the [Squide repository](https://github.com/workleap/wl-squide/blob/main/.github/workflows/code-review.yml) on GitHub.
 
-After several [rounds of testing](https://github.com/workleap/wl-agents-code-review-poc), the current recommendation is to use one, or both, of the following agents:
+## Install the agent skills
 
-- [Copilot](https://copilot.microsoft.com/), due to its ease of configuration, consistent issue detection, and well-structured reporting format.
-- [Claude Code](https://code.claude.com/docs/en/overview), without the [code-review](https://github.com/anthropics/claude-code/blob/main/plugins/code-review/README.md) plugin, for faster execution times and access to newer AI features.
+First, install directly in your project the [recommended frontend code review extensions](./setup-agent-extensions.md#code-review-extensions) that match your project's technology stack.
 
-To enhance the code review workflow with agent skills, complete the following steps :point_down:
+## Create the prompt file
 
-## Create an agent file
+Then, create a `.github/prompts/code-review.md` file with the following content, and adjust the list of agent skills to match your project's technology stack:
 
-First, create an `AGENTS.md` file at the root of the workspace or update an existing agent file with the following content:
+````md .github/prompts/code-review.md
+# Code Review
 
-```md AGENTS.md
-## Code Review Instructions
+You are an automated code reviewer for this repository. Analyze the PR diff for bugs, security vulnerabilities, and code quality problems.
 
-### Agent skills
+## Rules
 
-During code reviews, load and apply agent skills from the `./.agents/skills` folder as described below.
+- Only report definite issues introduced by this change (not pre-existing ones).
+- Every reported issue must include a clear fix, with the file path and line number.
+- Skip style preferences, minor nitpicks, and issues typically caught by linters.
+- Do not include positive feedback; focus only on problems.
 
-#### Always apply
+## Severity
 
-Apply these skills to every changed line in `.ts`, `.tsx`, `.js`, and `.jsx` files:
+- **Critical** — data loss or security breach.
+- **High** — incorrect behavior.
+- **Medium** — conditional issues.
+- **Low** — minor issues or typos.
 
-* `/accessibility`
-* `/best-practices`
-* `/core-web-vitals`
-* `/performance`
+## Agent skills
 
-#### Apply based on imports
+When performing code reviews, load and use the following agent skills available in the `.agents/skills/` folder.
 
-Apply the following skills to changed lines only, based on detected imports:
+### Apply based on file name (changed lines only)
 
-* Files importing `@squide/*` → `/workleap-squide`
-* Files importing `@workleap/logging` → `/workleap-logging`
-* Files importing `@workleap/telemetry` → `/workleap-telemetry`
-* Files importing
-  `@workleap/browserslist-config`,
-  `@workleap/eslint-configs`,
-  `@workleap/stylelint-plugin`,
-  `@workleap/typescript-configs`,
-  `@workleap/rsbuild-configs`,
-  `@workleap/rslib-configs`
-  → `/workleap-web-configs`
-* Files importing `react-aria-components` → `react-aria`
+- Source files (`*.ts`, `*.tsx`, `*.js`, `*.jsx`, excluding test files) -> `/accessibility`, `/best-practices`
+- React files (`*.tsx`, `*.jsx`, excluding test files) -> `/workleap-react-best-practices`
+- Test files (`*.test.ts`, `*.test.tsx`, `*.spec.ts`, `*.spec.tsx`) -> `/vitest`
+- `turbo.json` -> `/turborepo`
+- `package.json`, `pnpm-workspace.yaml`, `pnpm-lock.yaml`, `.npmrc` -> `/pnpm`
 
-#### Apply based on file name or type
+### Apply based on imports (changed lines only)
 
-* `turbo.json` → `/turborepo`
+- Files importing `@workleap/logging` -> `/workleap-logging`
+- Files importing `@workleap/telemetry` -> `/workleap-telemetry`
+- Files importing `@workleap/browserslist-config`, `@workleap/eslint-configs`, `@workleap/stylelint-plugin`, `@workleap/typescript-configs`, `@workleap/rsbuild-configs`, `@workleap/rslib-configs` -> `/workleap-web-configs`
 
-### Issue reporting
+## Issues reporting
 
 When reporting issues:
 
-* If an issue corresponds to a specific agent skill or a custom guideline, reference it explicitly.
-* Otherwise, assign the issue to the most relevant category based on its nature.
-```
+- If the issue matches an agent skill, name the skill explicitly.
+- Otherwise, choose an appropriate category based on the nature of the issue.
+- All issues must be reported as inline pull request comments using the `mcp__github_inline_comment__` tools.
+````
 
-Then, update the [agent skills](https://workleap.github.io/wl-idp-docs-hub/ai/setup-agent-extensions/) to align with the project's technology stack.
+## Create the workflow file
 
-## Setup Copilot
+Then, create a `.github/workflows/code-review.yml` file for the GitHub action:
 
-When using Copilot, add a `.github/copilot-instructions.md file and include the content below:
-
-```md .github/copilot-instructions.md
-This repository's instructions are defined in the root `AGENTS.md` file. GitHub Copilot and any other tools that read `.github/copilot-instructions.md` should treat `AGENTS.md` as the single source of truth.
-```
-
-## Setup Claude Code
-
-When using Claude Code, first create a `CLAUDE.md` file at the root of the workspace with the following content:
-
-```md CLAUDE.md
-This repository's instructions are defined in the root `AGENTS.md` file. Claude Code and any other tools that read `CLAUDE.md` should treat `AGENTS.md` as the single source of truth.
-```
-
-Then, create a `.github/workflows/claude-code-review.yml` file with the following content:
-
-```yaml .github/workflows/claude-code-review.yml
-name: Claude Code Review
-
-concurrency:
-  group: claude-code-review-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+```yaml .github/workflows/code-review.yml
+name: Code review
 
 on:
   pull_request:
     branches: ["main"]
     types: [opened, synchronize, ready_for_review, reopened]
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+  # Required for OIDC authentication: https://github.com/anthropics/claude-code-action/blob/main/docs/faq.md#why-am-i-getting-oidc-authentication-errors.
+  id-token: write
+
+concurrency:
+  group: code-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
-  claude-review:
+  code-review:
     # Skip drafts.
     if: ${{ !github.event.pull_request.draft }}
 
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-      issues: write
-      # Required for OIDC authentication: https://github.com/anthropics/claude-code-action/blob/main/docs/faq.md#why-am-i-getting-oidc-authentication-errors.
-      id-token: write
-
+    timeout-minutes: 60
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           # Provides better git history context than "1".
           fetch-depth: 0
 
-      - name: Run Claude Code Review
-        id: claude-review
+      - name: Run code review
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          allowed_bots: "claude[bot]"
           prompt: |
-            REPO: ${{ github.repository }}
-
-            Review PR #${{ github.event.pull_request.number }} for bugs, security issues, and code quality problems.
+            Review PR #${{ github.event.pull_request.number }} in ${{ github.repository }}.
             Get the diff: gh pr diff ${{ github.event.pull_request.number }}
 
-            IMPORTANT:
-            - You must read and follow the review instructions defined in the root AGENTS.md file.
-
-            RULES:
-            - Only report definite issues introduced by this change (not pre-existing ones).
-            - Every reported issue must include a clear fix, with the file path and line number.
-            - Skip style preferences, minor nitpicks, and issues typically caught by linters.
-            - Do not include positive feedback; focus only on problems.
-
-            SEVERITY:
-            - Critical (data loss/security breach), High (incorrect behavior), Medium (conditional issues), Low (minor/typos).
-
-            REPORTING:
-            - All issues must be reported as inline pull request comments using GitHub MCP.
+            Read and follow the instructions in .github/prompts/code-review.md
           claude_args: >-
-            --allowed-tools
-            "Read,Write,Grep,Glob,Skill,Task,
-             Bash(gh pr *),
-             mcp__github_inline_comment__*"
+            --allowedTools Read,Glob,Grep,Skill,Task,Bash(gh:*),mcp__github_inline_comment__*
+        env:
+          # Required by gh CLI to fetch PR diffs and post review comments.
+          GH_TOKEN: ${{ github.token }}
 ```
 
-Then, add `ANTHROPIC_API_KEY` as a [KeyVault secret](https://workleap.atlassian.net/wiki/spaces/TL/pages/5211226436/How+to+use+managed+secrets+in+your+pipeline) or a [GitHub action secret](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets).
-
 !!!info
-The previous workflow does not use the [code-review](https://github.com/anthropics/claude-code/blob/main/plugins/code-review/README.md) plugin. Our tests showed that enabling the plugin often results in reviews costing above $4 per pull request. This is because the plugin creates a pool of four agents that work together to review the changes. Our testing indicates that acceptable review quality can be achieved without the plugin, at a lower cost.
+The previous workflow does not use the [code-review](https://github.com/anthropics/claude-code/blob/main/plugins/code-review/README.md) plugin. Our tests showed that enabling the plugin often results in reviews costing above $4 per review. This is because the plugin creates a pool of four agents that work together to review the changes. Our testing indicates that acceptable review quality can be achieved without the plugin, at a lower cost.
 !!!
-
-## Install agent skills
-
-Finally, using [skills.sh](https://skills.sh/), install into the repository the agent skills listed in the `AGENTS.md` file.
-
-:::align-image-left
-![Examples of locally installed agent skills](../static/installed-agent-skills.png){width=220}
-:::
 
 ## Try it :rocket:
 

@@ -1,6 +1,6 @@
 ---
 order: 30
-label: "Joining the Hub"
+label: Joining the Hub
 ---
 
 # Joining the Hub

@@ -1,5 +1,5 @@
 ---
 order: 190
-label: "ESLint"
+label: ESLint
 redirect: https://workleap.github.io/wl-web-configs/eslint/getting-started/
 ---

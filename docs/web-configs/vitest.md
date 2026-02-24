@@ -1,5 +1,5 @@
 ---
 order: 140
-label: "Vitest"
+label: Vitest
 redirect: https://workleap.github.io/wl-web-configs/vitest/setup-turborepo/
 ---
