@@ -1,6 +1,6 @@
 ---
 order: 180
-label: Setup an update dependencies workflow
+label: Setup update dependencies workflow
 ---
 
 # Setup an update dependencies workflow
