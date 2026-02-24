@@ -12,7 +12,7 @@ Agents can be extended with **additional capabilities** to interact with tools, 
 
 Below is a non-exhaustive list of agent extensions we currently recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies evolve.
 
-:point_right: To propose a new agent skill or MCP, [open an issue](https://github.com/workleap/wl-idp-docs-hub/issues) on GitHub.
+:point_right: To propose a new agent extension, [open an issue](https://github.com/workleap/wl-idp-docs-hub/issues) on GitHub.
 
 ==- Key differences between agent skills and MCP
 

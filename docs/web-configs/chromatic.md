@@ -1,5 +1,5 @@
 ---
 order: 120
-label: "Chromatic"
+label: Chromatic
 redirect: https://workleap.github.io/wl-web-configs/chromatic/best-practices/
 ---

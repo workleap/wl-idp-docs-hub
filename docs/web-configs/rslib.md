@@ -1,5 +1,5 @@
 ---
 order: 150
-label: "Rslib"
+label: Rslib
 redirect: https://workleap.github.io/wl-web-configs/rslib/getting-started/
 ---

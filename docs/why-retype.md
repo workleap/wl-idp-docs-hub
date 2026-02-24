@@ -1,6 +1,6 @@
 ---
 order: 20
-label: "Why Retype?"
+label: Why Retype?
 ---
 
 # Why Retype?

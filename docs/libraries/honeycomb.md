@@ -1,5 +1,5 @@
 ---
 order: 40
-label: "Honeycomb"
+label: Honeycomb
 redirect: https://workleap.github.io/wl-telemetry
 ---
