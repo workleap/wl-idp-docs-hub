@@ -21,8 +21,8 @@ jobs:
             dotnet-version: 9.0.x
 
         - uses: retypeapp/action-build@latest
-          with:
-              license: ${{ secrets.RETYPE_API_KEY }}
+          env:
+              RETYPE_KEY: ${{ secrets.RETYPE_API_KEY }}
 
         - uses: retypeapp/action-github-pages@latest
           with:
