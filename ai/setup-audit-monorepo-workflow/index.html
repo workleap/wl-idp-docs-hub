@@ -11,18 +11,18 @@
     <meta name="generator" content="Retype 4.0.0">
 
     <!-- Primary Meta Tags -->
-    <title>Setup a code review workflow</title>
-    <meta name="title" content="Setup a code review workflow">
-    <meta name="description" content="Review agents can be extended with additional capabilities to better understand your tools, frameworks, and internal libraries. This guide explains how to">
+    <title>Setup an audit monorepo workflow</title>
+    <meta name="title" content="Setup an audit monorepo workflow">
+    <meta name="description" content="As AI agents accelerate development velocity, regularly validating code quality becomes even more important. This guide describes how to set up a GitHub">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://workleap.github.io/wl-idp-docs-hub/ai/setup-code-review-workflow/">
+    <link rel="canonical" href="https://workleap.github.io/wl-idp-docs-hub/ai/setup-audit-monorepo-workflow/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://workleap.github.io/wl-idp-docs-hub/ai/setup-code-review-workflow/">
-    <meta property="og:title" content="Setup a code review workflow">
-    <meta property="og:description" content="Review agents can be extended with additional capabilities to better understand your tools, frameworks, and internal libraries. This guide explains how to">
+    <meta property="og:url" content="https://workleap.github.io/wl-idp-docs-hub/ai/setup-audit-monorepo-workflow/">
+    <meta property="og:title" content="Setup an audit monorepo workflow">
+    <meta property="og:description" content="As AI agents accelerate development velocity, regularly validating code quality becomes even more important. This guide describes how to set up a GitHub">
     <meta property="og:site_name" content="Frontend Platform">
     <meta property="og:locale" content="en_US">
 
@@ -184,23 +184,23 @@
                             </svg>
                         </li>
                         <li class="pr-4">
-                            <a href="../../ai/setup-code-review-workflow/" class="pr-4">
-                                Setup code review workflow
+                            <a href="../../ai/setup-audit-monorepo-workflow/" class="pr-4">
+                                Setup audit monorepo workflow
                             </a>
                         </li>
                     </ol>
                 </nav>
 
                 <!-- Page content  -->
-<doc-anchor-target id="setup-a-code-review-workflow" class="break-words">
+<doc-anchor-target id="setup-an-audit-monorepo-workflow" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-a-code-review-workflow">#</doc-anchor-trigger>
-        <span>Setup a code review workflow</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setup-an-audit-monorepo-workflow">#</doc-anchor-trigger>
+        <span>Setup an audit monorepo workflow</span>
     </h1>
 </doc-anchor-target>
-<p>Review agents can be extended with additional capabilities to better understand your tools, frameworks, and internal libraries. This guide explains how to create a <a href="https://github.com/features/actions" class="outbound" target="_blank">GitHub Action</a> that uses <a href="https://code.claude.com/" class="outbound" target="_blank">Claude Code</a> and <a href="https://agentskills.io/home" class="outbound" target="_blank">agent skills</a> to automate code reviews.</p>
+<p>As AI agents accelerate development velocity, regularly validating code quality becomes even more important. This guide describes how to set up a <a href="https://github.com/features/actions" class="outbound" target="_blank">GitHub Action</a> that uses <a href="https://code.claude.com/" class="outbound" target="_blank">Claude Code</a> and <a href="https://agentskills.io/home" class="outbound" target="_blank">agent skills</a> to perform a monthly codebase audit.</p>
 <blockquote>
-<p><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M10.303 16.652c-2.837-.344-4.835-2.385-4.835-5.028 0-1.074.387-2.235 1.031-3.008-.279-.709-.236-2.214.086-2.837.86-.107 2.02.344 2.708.967.816-.258 1.676-.386 2.728-.386 1.053 0 1.913.128 2.686.365.666-.602 1.848-1.053 2.708-.946.3.581.344 2.085.064 2.815.688.817 1.053 1.913 1.053 3.03 0 2.643-1.998 4.641-4.877 5.006.73.473 1.224 1.504 1.224 2.686v2.235c0 .644.537 1.01 1.182.752 3.889-1.483 6.94-5.372 6.94-10.185 0-6.081-4.942-11.044-11.022-11.044-6.081 0-10.98 4.963-10.98 11.044a10.84 10.84 0 0 0 7.112 10.206c.58.215 1.139-.172 1.139-.752v-1.719a2.768 2.768 0 0 1-1.032.215c-1.418 0-2.256-.773-2.857-2.213-.237-.58-.495-.924-.989-.988-.258-.022-.344-.129-.344-.258 0-.258.43-.451.86-.451.623 0 1.16.386 1.719 1.181.43.623.881.903 1.418.903.537 0 .881-.194 1.375-.688.365-.365.645-.687.903-.902Z"/></g></g></svg> For a complete example of this workflow, refer to the <a href="https://github.com/workleap/wl-squide/blob/main/.github/workflows/code-review.yml" class="outbound" target="_blank">Squide repository</a> on GitHub.</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><g><path d="M10.303 16.652c-2.837-.344-4.835-2.385-4.835-5.028 0-1.074.387-2.235 1.031-3.008-.279-.709-.236-2.214.086-2.837.86-.107 2.02.344 2.708.967.816-.258 1.676-.386 2.728-.386 1.053 0 1.913.128 2.686.365.666-.602 1.848-1.053 2.708-.946.3.581.344 2.085.064 2.815.688.817 1.053 1.913 1.053 3.03 0 2.643-1.998 4.641-4.877 5.006.73.473 1.224 1.504 1.224 2.686v2.235c0 .644.537 1.01 1.182.752 3.889-1.483 6.94-5.372 6.94-10.185 0-6.081-4.942-11.044-11.022-11.044-6.081 0-10.98 4.963-10.98 11.044a10.84 10.84 0 0 0 7.112 10.206c.58.215 1.139-.172 1.139-.752v-1.719a2.768 2.768 0 0 1-1.032.215c-1.418 0-2.256-.773-2.857-2.213-.237-.58-.495-.924-.989-.988-.258-.022-.344-.129-.344-.258 0-.258.43-.451.86-.451.623 0 1.16.386 1.719 1.181.43.623.881.903 1.418.903.537 0 .881-.194 1.375-.688.365-.365.645-.687.903-.902Z"/></g></g></svg> For a complete example of this workflow, refer to the <a href="https://github.com/workleap/wl-squide/blob/main/.github/workflows/audit-monorepo.yml" class="outbound" target="_blank">Squide repository</a> on GitHub.</p>
 </blockquote>
 <doc-anchor-target id="install-the-agent-skills">
     <h2>
@@ -208,59 +208,110 @@
         <span>Install the agent skills</span>
     </h2>
 </doc-anchor-target>
-<p>First, install directly in your project the <a href="../setup-agent-extensions/#code-review-extensions">recommended frontend code review extensions</a> that match your project&#x27;s technology stack.</p>
+<p>First, install directly in your project the <a href="../setup-agent-extensions/#audit-extensions">recommended frontend audit extensions</a> that match your project&#x27;s technology stack.</p>
 <doc-anchor-target id="create-the-prompt-file">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-the-prompt-file">#</doc-anchor-trigger>
         <span>Create the prompt file</span>
     </h2>
 </doc-anchor-target>
-<p>Then, create a <code translate="no" v-pre>.github/prompts/code-review.md</code> file with the following content, and adjust the list of agent skills to match your project&#x27;s technology stack:</p>
+<p>Then, create a <code translate="no" v-pre>.github/prompts/audit-monorepo.md</code> file with the following content, and adjust the list of agent skills to match your project&#x27;s technology stack:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">.github/prompts/code-review.md</div>
-<pre translate="no" class="language-markdown"><code v-pre class="language-markdown"># Code Review
+<div class="codeblock-title">.github/prompts/audit-monorepo.md</div>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown"># Audit Monorepo
 
-You are an automated code reviewer for this repository. Analyze the PR diff for bugs, security vulnerabilities, and code quality problems.
+You are an automated agent responsible for auditing this monorepo against best practices defined in locally installed agent skills. You produce a report of actionable findings as a GitHub issue.
 
-## Rules
+## Severity levels
 
-- Only report definite issues introduced by this change (not pre-existing ones).
-- Every reported issue must include a clear fix, with the file path and line number.
-- Skip style preferences, minor nitpicks, and issues typically caught by linters.
-- Do not include positive feedback; focus only on problems.
+- **High** — actively harmful pattern causing broken caches, incorrect builds, or security risk.
+- **Medium** — suboptimal pattern with measurable impact on performance, maintainability, or correctness.
+- **Low** — minor improvement opportunity, non-urgent.
+- **Informational** — working as designed or acceptable trade-off. **Do NOT report these.**
 
-## Severity
+## False positive prevention
 
-- **Critical** — data loss or security breach.
-- **High** — incorrect behavior.
-- **Medium** — conditional issues.
-- **Low** — minor issues or typos.
+Before including ANY finding in the report, you MUST:
 
-## Agent skills
+1. Identify the potential issue from the skill documentation.
+2. Re-read the actual source file to confirm the issue exists.
+3. Consider whether the pattern is intentional or is an explicit choice with a valid trade-off.
+4. Ask yourself: &quot;Does this finding describe a **real problem** the maintainers would want to fix, or am I just noting a deviation from a textbook default?&quot; Only real problems belong in the report.
+5. Do NOT recommend replacing a working pattern with an alternative that has its own trade-offs (e.g., recommending a remote URL over a local path, or vice versa). If both options are reasonable, it's not a finding.
+6. Only include the finding if you are confident it is a genuine issue at severity Low or higher.
 
-When performing code reviews, load and use the following agent skills available in the `.agents/skills/` folder.
+When in doubt, do NOT report the finding.
 
-### Apply based on file name (changed lines only)
+**Examples of patterns that are NOT findings:**
 
-- Source files (`*.ts`, `*.tsx`, `*.js`, `*.jsx`, excluding test files) -&gt; `/accessibility`, `/best-practices`
-- React files (`*.tsx`, `*.jsx`, excluding test files) -&gt; `/workleap-react-best-practices`
-- Test files (`*.test.ts`, `*.test.tsx`, `*.spec.ts`, `*.spec.tsx`) -&gt; `/vitest`
-- `turbo.json` -&gt; `/turborepo`
-- `package.json`, `pnpm-workspace.yaml`, `pnpm-lock.yaml`, `.npmrc` -&gt; `/pnpm`
+- A task using `pkg#task` dependencies instead of `^build` (may be intentional for isolated/module-federation workflows)
+- Root tasks (`//#task`) that exist because the task genuinely applies to root-level code only
+- A `$schema` pointing to a local path or a remote URL — both are valid choices
+- A workspace glob like `samples/**` that correctly matches the actual directory structure
+- An env var that exists at runtime but isn't in `globalEnv` — only flag it if there's evidence of actual cache correctness issues, not just because it's &quot;missing&quot; from a list
 
-### Apply based on imports (changed lines only)
+---
 
-- Files importing `@workleap/logging` -&gt; `/workleap-logging`
-- Files importing `@workleap/telemetry` -&gt; `/workleap-telemetry`
-- Files importing `@workleap/browserslist-config`, `@workleap/eslint-configs`, `@workleap/stylelint-plugin`, `@workleap/typescript-configs`, `@workleap/rsbuild-configs`, `@workleap/rslib-configs` -&gt; `/workleap-web-configs`
+## Step 1: Load skill documentation
 
-## Issues reporting
+Read all files in `.agents/skills/turborepo/`, `.agents/skills/pnpm/`, and `.agents/skills/workleap-react-best-practices/` (including all subdirectories) so you understand the best practices to audit against. Do not skip any file.
 
-When reporting issues:
+## Step 2: Audit
 
-- If the issue matches an agent skill, name the skill explicitly.
-- Otherwise, choose an appropriate category based on the nature of the issue.
-- All issues must be reported as inline pull request comments using the `mcp__github_inline_comment__` tools.</code></pre>
+Using the best practices and anti-patterns from the skill documentation loaded in Step 1, audit the repository. Read whatever files you need (turbo.json, package.json files, pnpm-workspace.yaml, .npmrc, pnpm-lock.yaml, tsconfig files, .env files, CI workflows, etc.) to check for issues. The skill documentation describes what to look for — use it to guide your investigation.
+
+## Step 3: Validate findings with a subagent
+
+Before generating the report, validate your findings using a subagent to eliminate false positives. Launch a subagent with the Task tool using the **opus** model and provide it with:
+
+1. The full list of candidate findings (severity, skill, file, description, and recommendation for each).
+2. Instructions to independently re-read each referenced file and verify whether the issue actually exists.
+3. Instructions to check whether each flagged pattern might be intentional (e.g., comments explaining the choice, consistency with the rest of the codebase, or a valid trade-off).
+4. Instructions to return a verdict for each finding: **confirmed** or **rejected** with a brief justification.
+
+Only carry forward findings that the subagent confirms. Drop any finding that the subagent rejects.
+
+## Step 4: Generate report
+
+Compile all confirmed findings (severity Low, Medium, or High only) into a structured report.
+
+If there are **zero findings**, STOP. The audit passed cleanly. You are done.
+
+If there are findings, create a GitHub issue:
+
+```bash
+gh issue create \
+  --title &quot;audit: monorepo audit findings — $(date -u +%Y-%m-%d)&quot; \
+  --body &quot;$(cat &lt;&lt;'EOF'
+## Monorepo Audit Report — YYYY-MM-DD
+
+### Skills Audited
+- Turborepo (best practices from `.agents/skills/turborepo/`)
+- pnpm (best practices from `.agents/skills/pnpm/`)
+- Workleap React Best Practices (best practices from `.agents/skills/workleap-react-best-practices/`)
+
+### Summary
+
+| # | Severity | Skill | Finding | File |
+|---|----------|-------|---------|------|
+| 1 | Medium | Turborepo | Brief description | `turbo.json` |
+
+### Details
+
+#### 1. [Finding title]
+
+**Severity:** Medium
+**Skill:** Turborepo
+**File:** `turbo.json:15`
+**Issue:** Description of the problem.
+**Recommendation:** How to fix it.
+
+---
+EOF
+)&quot;
+```
+
+Replace the placeholder content above with the actual findings. Then STOP. You are done.</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="create-the-workflow-file">
     <h2>
@@ -268,81 +319,54 @@ When reporting issues:
         <span>Create the workflow file</span>
     </h2>
 </doc-anchor-target>
-<p>Then, create a <code translate="no" v-pre>.github/workflows/code-review.yml</code> file for the GitHub action:</p>
+<p>Then, create a <code translate="no" v-pre>.github/workflows/audit-monorepo.yml</code> file for the GitHub action:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<div class="codeblock-title">.github/workflows/code-review.yml</div>
-<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">name: Code review
+<div class="codeblock-title">.github/workflows/audit-monorepo.yml</div>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">name: Audit monorepo
 
 on:
-  pull_request:
-    branches: [&quot;main&quot;]
-    types: [opened, synchronize, ready_for_review, reopened]
+  schedule:
+    - cron: &quot;0 9 1 * *&quot;
+  workflow_dispatch:
 
 permissions:
   contents: read
-  pull-requests: write
   issues: write
-  # Required for OIDC authentication: https://github.com/anthropics/claude-code-action/blob/main/docs/faq.md#why-am-i-getting-oidc-authentication-errors.
   id-token: write
 
 concurrency:
-  group: code-review-${{ github.event.pull_request.number }}
+  group: audit-monorepo
   cancel-in-progress: true
 
 jobs:
-  code-review:
-    # Skip drafts.
-    if: ${{ !github.event.pull_request.draft }}
-
+  audit-monorepo:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          # Provides better git history context than &quot;1&quot;.
-          fetch-depth: 0
 
-      - name: Run code review
+      - name: Audit monorepo
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          allowed_bots: &quot;claude[bot]&quot;
           prompt: |
-            Review PR #${{ github.event.pull_request.number }} in ${{ github.repository }}.
-            Get the diff: gh pr diff ${{ github.event.pull_request.number }}
-
-            Read and follow the instructions in .github/prompts/code-review.md
+            Read and follow the instructions in .github/prompts/audit-monorepo.md
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          show_full_output: true
           claude_args: &gt;-
-            --allowedTools Read,Glob,Grep,Skill,Task,Bash(gh:*),mcp__github_inline_comment__*
+            --max-turns 100
+            --allowedTools Read,Glob,Grep,Task,Bash(git:*),Bash(node:*),Bash(gh:*)
         env:
-          # Required by gh CLI to fetch PR diffs and post review comments.
+          # Required by gh CLI to create issues for audit findings.
           GH_TOKEN: ${{ github.token }}</code></pre>
 </doc-codeblock></div>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-info" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-<p>The previous workflow does not use the <a href="https://github.com/anthropics/claude-code/blob/main/plugins/code-review/README.md" class="outbound" target="_blank">code-review</a> plugin. Our tests showed that enabling the plugin often results in reviews costing above $4 per review. This is because the plugin creates a pool of four agents that work together to review the changes. Our testing indicates that acceptable review quality can be achieved without the plugin, at a lower cost.</p>
-        </div>
-    </div>
-</div>
 <doc-anchor-target id="try-it-rocket">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#try-it-rocket">#</doc-anchor-trigger>
         <span>Try it <span class="docs-emoji">&#x1F680;</span></span>
     </h2>
 </doc-anchor-target>
-<p>Deliberately add changes that should trigger the installed agent skills, then open a pull request. The review agent should report issues as inline comments on the pull request.</p>
+<p>Push the GitHub Action and manually trigger the workflow. Once it completes, the workflow should have created an issue with it&#x27;s findings.</p>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
@@ -363,7 +387,7 @@ jobs:
             </div>
             <footer id="retype-content-footer" class="clear-both">
                 <div class="flex flex-wrap items-center justify-between mt-14">
-                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-body-link font-body-link hover:text-body-link-hover hover:underline" href="https://github.com/workleap/wl-idp-docs-hub/blob/main/docs/ai/setup-code-review-workflow.md" target="_blank" rel="noopener">
+                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-body-link font-body-link hover:text-body-link-hover hover:underline" href="https://github.com/workleap/wl-idp-docs-hub/blob/main/docs/ai/setup-audit-monorepo-workflow.md" target="_blank" rel="noopener">
                         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         <span>Edit this page</span>
                     </a>
@@ -371,20 +395,20 @@ jobs:
             
                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                     <div class="w-1/2">
-                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ai/setup-agent-extensions/">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../ai/setup-update-dependencies-workflow/">
                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                             <span>
                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                <span class="block mt-1">Setup agent extensions</span>
+                                <span class="block mt-1">Setup update dependencies workflow</span>
                             </span>
                         </a>
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../ai/setup-update-dependencies-workflow/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../guides/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Setup update dependencies workflow</span>
+                                <span class="block mt-1">Guides</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>
@@ -428,6 +452,6 @@ jobs:
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Setup code review workflow", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Setup audit monorepo workflow", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 2 }</script>
 </body>
 </html>
