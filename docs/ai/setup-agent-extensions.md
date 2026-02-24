@@ -138,6 +138,6 @@ Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Agent extensions for the `agent-browser` CLI | [vercel-labs/agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | - |
 Evaluate third-party agent skills for security risks before adoption. | [workleap-skill-safety-review](https://skills.sh/workleap/wl-web-configs/workleap-skill-safety-review) | - |
-Reduce skill token cost (bloat) without losing coverage. | [workleap-skill-optimizer](https://skills.sh/workleap/wl-web-configs/workleap-skill-optimizer) | - |
+Reduce skill token consumption (metadata bloat) without losing coverage. <br><br>_Important: Must be invoked manually using `/workleap-skill-optimizer`._ | [workleap-skill-optimizer](https://skills.sh/workleap/wl-web-configs/workleap-skill-optimizer) | - |
 
 :point_right: To propose a new agent extension, [open an issue](https://github.com/workleap/wl-idp-docs-hub/issues) on GitHub.
