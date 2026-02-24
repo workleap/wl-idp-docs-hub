@@ -1,7 +1,6 @@
 ---
 order: 190
-toc:
-    depth: 2-3
+label: Setup code review workflow
 ---
 
 # Setup a code review workflow

@@ -1,7 +1,6 @@
 ---
 order: 170
-toc:
-    depth: 2-3
+label: Setup audit monorepo workflow
 ---
 
 # Setup an audit monorepo workflow

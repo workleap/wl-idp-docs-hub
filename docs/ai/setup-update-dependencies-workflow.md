@@ -1,7 +1,6 @@
 ---
 order: 180
-toc:
-    depth: 2-3
+label: Setup an update dependencies workflow
 ---
 
 # Setup an update dependencies workflow
