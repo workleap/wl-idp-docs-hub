@@ -10,7 +10,7 @@ Agents can be extended with **additional capabilities** to interact with tools, 
 
 ## Recommended extensions
 
-Below is a non-exhaustive list of agent extensions we currently recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies change. Avoid installing every extension, as too many can negatively affect performance. Select only those that are relevant to your project.
+Below is a non-exhaustive curated list of agent extensions we recommend for frontend development at Workleap. This list is expected to change over time as our practices, patterns, and technologies change. Avoid installing every extension, as too many can negatively affect performance. Select only those that are relevant to your project.
 
 ==- :icon-light-bulb: Key differences between agent skills and MCP
 
@@ -120,7 +120,7 @@ PNPM best practices. | [antfu/skills/pnpm](https://skills.sh/antfu/skills/pnpm) 
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Let agents control and inspect a live Chrome browser. Useful for automation, in-depth debugging, and performance analysis. **It debug and inspect a page as a human.** | - | [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp?tab=readme-ov-file#getting-started) |
-Drive a browser like a test runner/automation tool (scripted actions and snapshots). **It consume 93% less tokens than Playwright.** | [vercel-labs/agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | - |
+Agent extensions for the `agent-browser` CLI. `agent-browser` drives a browser like a test runner/automation tool (scripted actions and snapshots). **It consume 93% less tokens than Playwright.** | [vercel-labs/agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | - |
 Help the agent query the LogRocket highlights API to retrieve user session information, behavior data, and answer questions about user activity. | - | [@logrocket/mcp](https://www.npmjs.com/package/@logrocket/mcp)
 
 ### Audit extensions
@@ -132,13 +132,12 @@ Workleap React best practices. | [workleap-react-best-practices](https://worklea
 Workleap Chromatic best practices. | [workleap-chromatic-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
 Turborepo best practices. | [vercel/turborepo](https://skills.sh/vercel/turborepo/turborepo) | - |
 PNPM best practices. | [antfu/skills/pnpm](https://skills.sh/antfu/skills/pnpm) | - |
-Explore and test a web application for bugs, UX issues, and other problems, producing a structured report with step-by-step screenshots and reproduction evidence. | [vercel-labs/agent-browser/dogfood](https://skills.sh/vercel-labs/agent-browser/dogfood) | - |
+Explore and test a web application with the `agent-browser` CLI for bugs, UX issues, and other problems, producing a structured report with step-by-step screenshots and reproduction evidence. | [vercel-labs/agent-browser/dogfood](https://skills.sh/vercel-labs/agent-browser/dogfood) | - |
 
 ### Others
 
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
-Agent extensions for the `agent-browser` CLI | [vercel-labs/agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) | - |
 Evaluate third-party agent skills for security risks before adoption. | [workleap-skill-safety-review](https://skills.sh/workleap/wl-web-configs/workleap-skill-safety-review) | - |
 Reduce skill token consumption (metadata bloat) without losing coverage. <br><br>_Important: Must be invoked manually using `/workleap-skill-optimizer`._ | [workleap-skill-optimizer](https://skills.sh/workleap/wl-web-configs/workleap-skill-optimizer) | - |
 
