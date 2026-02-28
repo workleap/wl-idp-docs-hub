@@ -9,13 +9,19 @@ This guide describes how to set up a [GitHub Action](https://github.com/features
 
 >:icon-mark-github: For a complete example of this workflow, refer to the [Squide repository](https://github.com/workleap/wl-squide/blob/main/.github/workflows/dogfood.yml) on GitHub.
 
-## Install the agent skills
+## Install the agent skills and the CLI
 
 First, install directly in your project the [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) and [dogfood](https://skills.sh/vercel-labs/agent-browser/dogfood) skills. To do so, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
 pnpx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
 pnpx skills add https://github.com/vercel-labs/agent-browser --skill dogfood
+```
+
+Then, install the [agent-browser](https://www.npmjs.com/package/agent-browser) CLI. To do so, open a terminal at the root of the workspace and execute the following command:
+
+```bash
+pnpm add -D agent-browser
 ```
 
 ## Create the prompt file
