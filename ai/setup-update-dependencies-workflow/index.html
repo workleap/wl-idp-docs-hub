@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825526684608">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825574337948">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/favicon.png" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825526684608" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825574337948" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825526684608" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825574337948" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825526684608" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825526684608" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825574337948" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825574337948" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -309,8 +309,8 @@ All tests must pass. If a test fails, run the failing package's tests directly (
 
 Use `agent-browser` for all browser interactions in this step. It is installed as a workspace devDependency. Read the locally installed agent skill at `.agents/skills/agent-browser/` to learn the available commands. Do NOT use `agent-browser screenshot` — use only `snapshot` (text) and `console` (errors). Screenshots are binary and cannot be analyzed. Running a build is NOT sufficient — you must start the dev server and validate in a real browser.
 
-1. Start the dev server in the background using the shell `&amp;` operator (do NOT use `run_in_background: true`): `pnpm dev-endpoints &gt; /tmp/endpoints-dev.log 2&gt;&amp;1 &amp;`
-2. The endpoints app listens on port **8080**. Wait for it to be ready — do NOT use `sleep`, do NOT write polling loops, do NOT parse the log file for a URL. Instead, immediately run: `curl --retry 30 --retry-delay 5 --retry-connrefused --silent --output /dev/null http://localhost:8080`
+1. Start the server in the background using the shell `&amp;` operator (do NOT use `run_in_background: true`): `pnpm serve-endpoints &gt; /tmp/endpoints-serve.log 2&gt;&amp;1 &amp;`
+2. The endpoints app listens on port **8080** (host) and **8081** (remote module). Wait for both to be ready — do NOT use `sleep`, do NOT write polling loops, do NOT parse the log file for a URL. Instead, immediately run: `curl --retry 30 --retry-delay 5 --retry-connrefused --silent --output /dev/null http://localhost:8080 &amp;&amp; curl --retry 30 --retry-delay 5 --retry-connrefused --silent --output /dev/null http://localhost:8081`. If the curl command fails, run `cat /tmp/endpoints-serve.log` for diagnostics.
 3. The app has a mock login page. Use username `temp` and password `temp` to authenticate.
 4. Navigate to the following pages and check that each renders without errors:
    - `/` (Home page)
