@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825574783570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.826073289005">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>Use loggers</title>
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/favicon.png" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825574783570" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.1.0.826073289005" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825574783570" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825574783570" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825574783570" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.1.0.826073289005" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.1.0.826073289005" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.1.0.826073289005" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -235,7 +235,7 @@
     </h2>
 </doc-anchor-target>
 <p>A logger can output log entries with different levels: <code translate="no" v-pre>debug</code>, <code translate="no" v-pre>information</code>, <code translate="no" v-pre>warning</code>, <code translate="no" v-pre>error</code>, <code translate="no" v-pre>critical</code>. This allows to filter logs according to a minimum severity:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="log-levels-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-typescript" data-line="4"><code v-pre class="language-typescript">import { BrowserConsoleLogger, LogLevel } from &quot;@workleap/logging&quot;;
 
 const logger = new BrowserConsoleLogger({
@@ -302,7 +302,7 @@ const logger = new BrowserConsoleLogger({
     </h2>
 </doc-anchor-target>
 <p>The following example shows how to integrate loggers into a Squide application (loggers are also supported in both React and non-React applications):</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="example-indextsx" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">index.tsx</div>
 <pre translate="no" class="language-tsx" data-line="12,30,34,39"><code v-pre class="language-tsx">import { createRoot } from &quot;react-dom/client&quot;;
 import { initializeWidgets } from &quot;@workleap-widgets/squide-firefly&quot;;
@@ -387,7 +387,7 @@ root.render(
     </h2>
 </doc-anchor-target>
 <p>To troubleshoot an issue in production, remove the <code translate="no" v-pre>LogLevel</code> from the <code translate="no" v-pre>LogRocketLogger</code> constructor options and set the <code translate="no" v-pre>verbose</code> option to <code translate="no" v-pre>true</code> when applicable:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="troubleshoot-a-production-issue-indextsx" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">index.tsx</div>
 <pre translate="no" class="language-tsx" data-line="12,30,35,52"><code v-pre class="language-tsx">import { createRoot } from &quot;react-dom/client&quot;;
 import { initializeWidgets } from &quot;@workleap-widgets/squide-firefly&quot;;
@@ -460,14 +460,14 @@ root.render(
     </h2>
 </doc-anchor-target>
 <p>Once loggers are configured, Squide applications can write log entries using the <a href="https://workleap.github.io/wl-squide/reference/runtime/runtime-class/" class="outbound" target="_blank">FireflyRuntime</a> instance:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="application-logs-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-typescript" data-line="3,5"><code v-pre class="language-typescript">import { useLogger } from &quot;@squide/firefly&quot;;
 
 const logger = useLogger();
 
 logger.debug(&quot;Hello!&quot;);</code></pre>
 </doc-codeblock></div>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="application-logs-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-typescript" data-line="5"><code v-pre class="language-typescript">import { useRuntime } from &quot;@squide/firefly&quot;;
 
 const runtime = useRuntime();

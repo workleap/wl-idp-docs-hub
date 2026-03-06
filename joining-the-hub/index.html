@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825574783570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.826073289005">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>Joining the Hub</title>
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.png" />
-    <link href="../resources/css/retype.css?v=4.0.1.825574783570" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.1.0.826073289005" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825574783570" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825574783570" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825574783570" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.1.0.826073289005" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.1.0.826073289005" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.1.0.826073289005" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -195,7 +195,7 @@
     </h3>
 </doc-anchor-target>
 <p>Then, open the <code translate="no" v-pre>retype.yml</code> file located at the root of the repository and copy/paste the following basic configuration:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="basic-setup-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># -------------------
 # Retype
@@ -228,7 +228,7 @@ showSidebarFilter: false
 verbose: true</code></pre>
 </doc-codeblock></div>
 <p>Finally, add the following script to your <code translate="no" v-pre>package.json</code> file:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="basic-setup-packagejson" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">package.json</div>
 <pre translate="no" class="language-json"><code v-pre class="language-json">{
     &quot;dev-docs&quot;: &quot;retype start&quot;
@@ -272,7 +272,7 @@ verbose: true</code></pre>
     </h4>
 </doc-anchor-target>
 <p>First, add Workleap&#x27;s <strong>reversed bleu</strong> logo and favicon to the <code translate="no" v-pre>/docs/static</code> folder:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="icons-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none" data-line="3-5"><code v-pre class="language-none">root
 ├── docs
 ├──── static
@@ -280,7 +280,7 @@ verbose: true</code></pre>
 ├────── favicon.png</code></pre>
 </doc-codeblock></div>
 <p>Then, configure Retype to use the new assets by including the following configurations to your <code translate="no" v-pre>retype.yml</code> file:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="icons-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># -------------------
 # Retype
@@ -334,7 +334,7 @@ favicon: ./static/favicon.png</code></pre>
 </table>
 </div>
 <p>Your Retype links configuration should closely resemble the following configurations</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="top-bar-links-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># -------------------
 # Retype
@@ -397,7 +397,7 @@ links:
 </table>
 </div>
 <p>Your Retype footer links configuration should closely resemble the following configurations</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="footer-links-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># -------------------
 # Retype
@@ -466,7 +466,7 @@ footer:
     </h4>
 </doc-anchor-target>
 <p>Create a <code translate="no" v-pre>_includes/head.html</code> file within the <code translate="no" v-pre>/docs</code> folder:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="create-the-_includesheadhtml-file-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none" data-line="3-4"><code v-pre class="language-none">root
 ├── docs
 ├──── _includes
@@ -479,7 +479,7 @@ footer:
     </h4>
 </doc-anchor-target>
 <p>Then, open the newly created <code translate="no" v-pre>_includes/head.html</code> file and copy/paste the following content:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="link-the-shared-css-file-_includesheadhtml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">_includes/head.html</div>
 <pre translate="no" class="language-markup"><code v-pre class="language-markup">&lt;link href=&quot;https://workleap.github.io/wl-idp-docs-hub/static/retype-customization.css&quot; rel=&quot;stylesheet&quot; /&gt;</code></pre>
 </doc-codeblock></div>
@@ -490,7 +490,7 @@ footer:
     </h3>
 </doc-anchor-target>
 <p>Workleap has acquired an <a href="https://retype.com/pro/" class="outbound" target="_blank">Enterprise license</a> for Retype, which you can locate the key in our secure Vault. To enable Retype&#x27;s pro features, copy and paste the following configuration into your <code translate="no" v-pre>retype.yml</code> file:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="activate-pro-features-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># -------------------
 # Retype Pro
@@ -532,7 +532,7 @@ start:
     </h3>
 </doc-anchor-target>
 <p>Since we&#x27;ve added the following lines to your <code translate="no" v-pre>retype.yml</code> file:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="configure-your-retype-wallet-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">start:
     pro: true</code></pre>

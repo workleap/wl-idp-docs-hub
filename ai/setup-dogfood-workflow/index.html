@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825574783570">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.1.0.826073289005">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.0.1">
+    <meta name="generator" content="Retype 4.1.0">
 
     <!-- Primary Meta Tags -->
     <title>Setup a dogfood workflow</title>
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/favicon.png" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825574783570" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.1.0.826073289005" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825574783570" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825574783570" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825574783570" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.1.0.826073289005" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.1.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.1.0.826073289005" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.1.0.826073289005" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -209,12 +209,12 @@
     </h2>
 </doc-anchor-target>
 <p>First, install directly in your project the <a href="https://skills.sh/vercel-labs/agent-browser/agent-browser" class="outbound" target="_blank">agent-browser</a> and <a href="https://skills.sh/vercel-labs/agent-browser/dogfood" class="outbound" target="_blank">dogfood</a> skills. To do so, open a terminal at the root of the workspace and execute the following command:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="install-the-agent-skills-and-the-cli-code-1" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-bash"><code v-pre class="language-bash">pnpx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
 pnpx skills add https://github.com/vercel-labs/agent-browser --skill dogfood</code></pre>
 </doc-codeblock></div>
 <p>Then, install the <a href="https://www.npmjs.com/package/agent-browser" class="outbound" target="_blank">agent-browser</a> CLI. To do so, open a terminal at the root of the workspace and execute the following command:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="install-the-agent-skills-and-the-cli-code-2" class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-bash"><code v-pre class="language-bash">pnpm add -D agent-browser</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="create-the-prompt-file">
@@ -224,7 +224,7 @@ pnpx skills add https://github.com/vercel-labs/agent-browser --skill dogfood</co
     </h2>
 </doc-anchor-target>
 <p>Then, create a <code translate="no" v-pre>.github/prompts/dogfood.md</code> with the following content, and adjust the steps to match your project&#x27;s capabilities:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="create-the-prompt-file-githubpromptsdogfoodmd" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">.github/prompts/dogfood.md</div>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown"># Dogfood
 
@@ -327,7 +327,7 @@ After the skill completes, read the generated report at `/tmp/dogfood-output/rep
     </h2>
 </doc-anchor-target>
 <p>Then, create a <code translate="no" v-pre>.github/workflows/dogfood.yml</code> file for the GitHub action:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
+<div id="create-the-workflow-file-githubworkflowsdogfoodyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">.github/workflows/dogfood.yml</div>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">name: Dogfood
 
