@@ -140,6 +140,6 @@ Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Evaluate third-party agent skills for security risks before adoption. | [workleap-skill-safety-review](https://skills.sh/workleap/wl-web-configs/workleap-skill-safety-review) | - |
 Reduce skill token consumption (metadata bloat) without losing coverage. <br><br>_Important: Must be invoked manually using `/workleap-skill-optimizer`._ | [workleap-skill-optimizer](https://skills.sh/workleap/wl-web-configs/workleap-skill-optimizer) | - |
-Netlify CLI and deployment | [netlify/context-and-tools/netlify-cli-and-deploy](https://skills.sh/netlify/context-and-tools/netlify-cli-and-deploy) | - |
+Netlify CLI and deployment | [netlify/context-and-tools/netlify-cli-and-deploy](https://skills.sh/netlify/context-and-tools/netlify-cli-and-deploy). | - |
 
 :point_right: To propose a new agent extension, [open an issue](https://github.com/workleap/wl-idp-docs-hub/issues) on GitHub.
