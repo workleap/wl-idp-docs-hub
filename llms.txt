@@ -1,0 +1,22 @@
+﻿# Workleap Frontend Platform
+
+> Welcome to the documentation hub for Workleap frontend libraries. On this site, you'll discover a variety of libraries that collectively constitutes the developer platform for creating frontend applications at Workleap.
+
+- [Workleap Frontend Platform](https://workleap.github.io/wl-idp-docs-hub/default.md): Workleap Frontend Platform
+- [AI](https://workleap.github.io/wl-idp-docs-hub/ai/index.md): Setup agent extensions
+- [Guides](https://workleap.github.io/wl-idp-docs-hub/guides/index.md): User loggers
+- [Joining the Hub](https://workleap.github.io/wl-idp-docs-hub/joining-the-hub.md): To include your library documentation in Workleap's Frontend Platform Hub, follow these steps.
+- [Why Retype?](https://workleap.github.io/wl-idp-docs-hub/why-retype.md): While GitHub README.md files are great, there are several compelling reasons to consider using a documentation platform like Retype:
+- [About](https://workleap.github.io/wl-idp-docs-hub/about.md): To ask a question or propose an idea, feel free to start a new discussion on Github. If you found a bug, please open an issue on Github.
+
+## AI
+
+- [Setup agent extensions](https://workleap.github.io/wl-idp-docs-hub/ai/setup-agent-extensions.md): Agents can be extended with additional capabilities to interact with tools, libraries, and external systems, enabling them to go beyond their core reasoning abilities.
+- [Setup a code review workflow](https://workleap.github.io/wl-idp-docs-hub/ai/setup-code-review-workflow.md): Review agents can be extended with additional capabilities to better understand your tools, frameworks, and internal libraries. This guide explains how to create a GitHub Action that uses Claude Code and agent skills to automate code reviews.
+- [Setup an update dependencies workflow](https://workleap.github.io/wl-idp-docs-hub/ai/setup-update-dependencies-workflow.md): Tired of Renovate Bot? Looking for a smarter way to keep your dependencies up to date? Create a GitHub Action that uses Claude Code to update a project dependencies once a week and perform validation tests before opening a pull request.
+- [Setup an audit monorepo workflow](https://workleap.github.io/wl-idp-docs-hub/ai/setup-audit-monorepo-workflow.md): As AI agents accelerate development velocity, regularly validating code quality becomes even more important. This guide describes how to set up a GitHub Action that uses Claude Code and agent skills to perform a monthly codebase audit.
+- [Setup a dogfood workflow](https://workleap.github.io/wl-idp-docs-hub/ai/setup-dogfood-workflow.md): This guide describes how to set up a GitHub Action that uses Claude Code and the agent browser and the dogfood skill to perform a monthly exploration session of a web application to find issues, and produce a report with full reproduction evidence for every finding.
+
+## Guides
+
+- [Use loggers](https://workleap.github.io/wl-idp-docs-hub/guides/use-loggers.md): Most of Workleap's frontend platform libraries can produce meaningful logs when provided with logger instances. Once configured, these libraries use a five-level logging system: debug, information, warning, error, and critical.
