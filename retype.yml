@@ -23,6 +23,12 @@ nav:
 start:
     pro: true
 
+lastUpdated:
+    date:
+        enabled: false
+    by:
+        enabled: false
+
 # -------------------
 # Retype
 # -------------------
