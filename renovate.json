@@ -3,7 +3,7 @@
     "extends": [
         "local>workleap/renovate-config"
     ],
-    "description": "Renovate only updates GitHub Actions..",
+    "description": "Renovate only updates GitHub Actions.",
     "enabledManagers": [
         "github-actions"
     ]
