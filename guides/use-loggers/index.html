@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831930185817">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847577039485">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Use loggers</title>
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/favicon.png" />
-    <link href="../../resources/css/retype.css?v=4.5.3.831930185817" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.847577039485" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.5.3.831930185817" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.5.3.831930185817" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.5.3.831930185817" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.847577039485" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.847577039485" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.847577039485" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -198,6 +198,12 @@
 <h1 id="use-loggers">Use loggers</h1>
 <p>Most of Workleap&#x27;s frontend platform libraries can produce meaningful logs when provided with logger instances. Once configured, these libraries use a five-level logging system: <code translate="no" v-pre>debug</code>, <code translate="no" v-pre>information</code>, <code translate="no" v-pre>warning</code>, <code translate="no" v-pre>error</code>, and <code translate="no" v-pre>critical</code>.</p>
 <p>The following libraries integrate with loggers that implement the RootLogger interface <span class="docs-emoji">&#x1F447;</span></p>
+<retype-table copy-text="Name | Documentation
+---  | ---
+Squide | [Guide](https://workleap.github.io/wl-squide/integrations/setup-logger/#capture-logs-in-logrocket)
+Platform widgets | [Guide](https://github.com/workleap/wlp-platform-widgets/blob/main/docs/user/usage/loggers.md)
+Telemetry | [Reference](https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers)
+Common Room | [Reference](https://workleap.github.io/wl-telemetry/reference/common-room/registercommonroominstrumentation/#use-loggers)">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -226,6 +232,7 @@
 </tbody>
 </table>
 </div>
+</retype-table>
 <h2 id="log-levels">Log levels</h2>
 <p>A logger can output log entries with different levels: <code translate="no" v-pre>debug</code>, <code translate="no" v-pre>information</code>, <code translate="no" v-pre>warning</code>, <code translate="no" v-pre>error</code>, <code translate="no" v-pre>critical</code>. This allows to filter logs according to a minimum severity:</p>
 <div id="log-levels-code-1" class="codeblock-wrapper"><doc-codeblock>

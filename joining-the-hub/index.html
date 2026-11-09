@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.831930185817">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847577039485">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 4.5.3">
+    <meta name="generator" content="Retype 4.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Joining the Hub</title>
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.png" />
-    <link href="../resources/css/retype.css?v=4.5.3.831930185817" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.6.0.847577039485" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.831930185817" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.831930185817" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.5.3.831930185817" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.6.0.847577039485" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.6.0.847577039485" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.6.0.847577039485" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -265,6 +265,14 @@ favicon: ./static/favicon.png</code></pre>
 </doc-codeblock></div>
 <h4 id="top-bar-links">Top bar links</h4>
 <p>Then, add the following links to the top nav bar of your Retype site:</p>
+<retype-table copy-text="Link | Description
+---  | ---
+Home | A link to the homepage of your Retype site.
+Found a bug | A link to your library's bug tracker.
+Feature requests | A link to request a new feature for your library.
+Releases | A link to a page listing your library releases.
+GitHub (or another platform) | A link to your library's repository.
+NPM / Nugget | A link to the library's packages.">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -301,6 +309,7 @@ favicon: ./static/favicon.png</code></pre>
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Your Retype links configuration should closely resemble the following configurations</p>
 <div id="top-bar-links-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
@@ -339,6 +348,10 @@ links:
 </doc-codeblock></div>
 <h4 id="footer-links">Footer links</h4>
 <p>Then, add the following links to the footer of your Retype site:</p>
+<retype-table copy-text="Link | Description
+---  | ---
+About | A link to an about page including meta informations about your library project ([example](https://workleap.github.io/wl-web-configs/about/)).
+License | A link to the license of your library.">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -359,6 +372,7 @@ links:
 </tbody>
 </table>
 </div>
+</retype-table>
 <p>Your Retype footer links configuration should closely resemble the following configurations</p>
 <div id="footer-links-retypeyml" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">retype.yml</div>
@@ -378,6 +392,13 @@ footer:
 </doc-codeblock></div>
 <h4 id="retype-navigation-sectionpage-items">Retype navigation section/page items</h4>
 <p>When appropriate, we recommend adding the following section/page item to the main navigation (on the left):</p>
+<retype-table copy-text="Item | Example
+--- | ---
+Introduction section | https://workleap.github.io/wl-squide/introduction
+Guides section | https://workleap.github.io/wl-squide/guides
+Reference section | https://workleap.github.io/wl-squide/reference
+Troubleshooting page | https://workleap.github.io/wl-squide/troubleshooting
+Samples page | https://workleap.github.io/wl-squide/samples">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -410,6 +431,7 @@ footer:
 </tbody>
 </table>
 </div>
+</retype-table>
 <h3 id="include-the-shared-css-customizations-file">Include the shared CSS customizations file</h3>
 <p>Our Retype websites share a <a href="https://github.com/workleap/wl-idp-docs-hub/blob/main/docs/static/retype_customization.css" class="outbound" target="_blank">CSS file</a> that contains several customizations to enhance the default Retype style. To incorporate this file into your Retype site, follow these steps:</p>
 <h4 id="create-the-_includesheadhtml-file">Create the <code translate="no" v-pre>_includes/head.html</code> file</h4>
