@@ -1,0 +1,10 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "local>workleap/renovate-config"
+    ],
+    "description": "Renovate only updates GitHub Actions.",
+    "enabledManagers": [
+        "github-actions"
+    ]
+}
