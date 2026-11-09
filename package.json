@@ -1,9 +1,9 @@
 {
     "name": "wl-idp-docs-hub",
-    "author": "Workleap",
-    "description": "Documentation hub for Workleap IDP.",
     "private": true,
+    "description": "Documentation hub for Workleap IDP.",
     "license": "Apache-2.0",
+    "author": "Workleap",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/workleap/wl-idp-docs-hub.git"
