@@ -9,7 +9,6 @@ Name | Documentation
 Squide | [Guide](https://workleap.github.io/wl-squide/integrations/setup-logger/#capture-logs-in-logrocket)
 Platform widgets | [Guide](https://github.com/workleap/wlp-platform-widgets/blob/main/docs/user/usage/loggers.md)
 Telemetry | [Reference](https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers)
-Common Room | [Reference](https://workleap.github.io/wl-telemetry/reference/common-room/registercommonroominstrumentation/#use-loggers)
 
 ## Log levels
 
@@ -58,14 +57,13 @@ For reference, here's a description of each level:
 
 The following example shows how to integrate loggers into a Squide application (loggers are also supported in both React and non-React applications):
 
-```tsx !#12,30,34,39 index.tsx
+```tsx !#11,29,34 index.tsx
 import { createRoot } from "react-dom/client";
 import { initializeWidgets } from "@workleap-widgets/squide-firefly";
 import { initializeFirefly, FireflyProvider } from "@squide/firefly";
 import { BrowserConsoleLogger, LogLevel, type RootLogger } from "@workleap/logging";
 import { LogRocketLogger, } from "@workleap/logrocket";
 import { initializeTelemetry, TelemetryProvider } from "@workleap/telemetry/react";
-import { registerCommonRoomInstrumentation } from "@workleap/common-room/react";
 
 // Do not do this, it's only for demo purpose.
 const isDev = process.env === "development";
@@ -88,10 +86,6 @@ const telemetryClient = initializeTelemetry({
         productId: "wlp",
         envOrTrackingApiBaseUrl: "development"
     },
-    loggers
-});
-
-registerCommonRoomInstrumentation("my-site-id", {
     loggers
 });
 
@@ -129,14 +123,13 @@ Create the `LogRocketLogger` instance with a minimum log level of `LogLevel.info
 
 To troubleshoot an issue in production, remove the `LogLevel` from the `LogRocketLogger` constructor options and set the `verbose` option to `true` when applicable:
 
-```tsx !#12,30,35,52 index.tsx
+```tsx !#11,29,46 index.tsx
 import { createRoot } from "react-dom/client";
 import { initializeWidgets } from "@workleap-widgets/squide-firefly";
 import { initializeFirefly, FireflyProvider } from "@squide/firefly";
 import { BrowserConsoleLogger, type RootLogger } from "@workleap/logging";
 import { LogRocketLogger, } from "@workleap/logrocket";
 import { initializeTelemetry, TelemetryProvider } from "@workleap/telemetry/react";
-import { registerCommonRoomInstrumentation } from "@workleap/common-room/react";
 
 // Do not do this, it's only for demo purpose.
 const isDev = process.env === "development";
@@ -159,11 +152,6 @@ const telemetryClient = initializeTelemetry({
         productId: "wlp",
         envOrTrackingApiBaseUrl: "development"
     },
-    verbose: true,
-    loggers
-});
-
-registerCommonRoomInstrumentation("my-site-id", {
     verbose: true,
     loggers
 });

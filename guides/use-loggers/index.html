@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/wl-idp-docs-hub">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847604966090">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.847642848658">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -39,12 +39,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../static/favicon.png" />
-    <link href="../../resources/css/retype.css?v=4.6.0.847604966090" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.847642848658" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.847604966090" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.847642848658" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.847604966090" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.847604966090" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.847642848658" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.6.0.847642848658" defer></script>
 
     <link href="static/retype-customization.css" rel="stylesheet" />
 
@@ -202,8 +202,7 @@
 ---  | ---
 Squide | [Guide](https://workleap.github.io/wl-squide/integrations/setup-logger/#capture-logs-in-logrocket)
 Platform widgets | [Guide](https://github.com/workleap/wlp-platform-widgets/blob/main/docs/user/usage/loggers.md)
-Telemetry | [Reference](https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers)
-Common Room | [Reference](https://workleap.github.io/wl-telemetry/reference/common-room/registercommonroominstrumentation/#use-loggers)">
+Telemetry | [Reference](https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers)">
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -224,10 +223,6 @@ Common Room | [Reference](https://workleap.github.io/wl-telemetry/reference/comm
 <tr>
 <td>Telemetry</td>
 <td><a href="https://workleap.github.io/wl-telemetry/reference/telemetry/initializetelemetry/#use-loggers" class="outbound" target="_blank">Reference</a></td>
-</tr>
-<tr>
-<td>Common Room</td>
-<td><a href="https://workleap.github.io/wl-telemetry/reference/common-room/registercommonroominstrumentation/#use-loggers" class="outbound" target="_blank">Reference</a></td>
 </tr>
 </tbody>
 </table>
@@ -274,13 +269,12 @@ const logger = new BrowserConsoleLogger({
 <p>The following example shows how to integrate loggers into a Squide application (loggers are also supported in both React and non-React applications):</p>
 <div id="example-indextsx" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">index.tsx</div>
-<pre translate="no" class="language-tsx" data-line="12,30,34,39"><code v-pre class="language-tsx">import { createRoot } from &quot;react-dom/client&quot;;
+<pre translate="no" class="language-tsx" data-line="11,29,34"><code v-pre class="language-tsx">import { createRoot } from &quot;react-dom/client&quot;;
 import { initializeWidgets } from &quot;@workleap-widgets/squide-firefly&quot;;
 import { initializeFirefly, FireflyProvider } from &quot;@squide/firefly&quot;;
 import { BrowserConsoleLogger, LogLevel, type RootLogger } from &quot;@workleap/logging&quot;;
 import { LogRocketLogger, } from &quot;@workleap/logrocket&quot;;
 import { initializeTelemetry, TelemetryProvider } from &quot;@workleap/telemetry/react&quot;;
-import { registerCommonRoomInstrumentation } from &quot;@workleap/common-room/react&quot;;
 
 // Do not do this, it's only for demo purpose.
 const isDev = process.env === &quot;development&quot;;
@@ -303,10 +297,6 @@ const telemetryClient = initializeTelemetry({
         productId: &quot;wlp&quot;,
         envOrTrackingApiBaseUrl: &quot;development&quot;
     },
-    loggers
-});
-
-registerCommonRoomInstrumentation(&quot;my-site-id&quot;, {
     loggers
 });
 
@@ -354,13 +344,12 @@ root.render(
 <p>To troubleshoot an issue in production, remove the <code translate="no" v-pre>LogLevel</code> from the <code translate="no" v-pre>LogRocketLogger</code> constructor options and set the <code translate="no" v-pre>verbose</code> option to <code translate="no" v-pre>true</code> when applicable:</p>
 <div id="troubleshoot-a-production-issue-indextsx" class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">index.tsx</div>
-<pre translate="no" class="language-tsx" data-line="12,30,35,52"><code v-pre class="language-tsx">import { createRoot } from &quot;react-dom/client&quot;;
+<pre translate="no" class="language-tsx" data-line="11,29,46"><code v-pre class="language-tsx">import { createRoot } from &quot;react-dom/client&quot;;
 import { initializeWidgets } from &quot;@workleap-widgets/squide-firefly&quot;;
 import { initializeFirefly, FireflyProvider } from &quot;@squide/firefly&quot;;
 import { BrowserConsoleLogger, type RootLogger } from &quot;@workleap/logging&quot;;
 import { LogRocketLogger, } from &quot;@workleap/logrocket&quot;;
 import { initializeTelemetry, TelemetryProvider } from &quot;@workleap/telemetry/react&quot;;
-import { registerCommonRoomInstrumentation } from &quot;@workleap/common-room/react&quot;;
 
 // Do not do this, it's only for demo purpose.
 const isDev = process.env === &quot;development&quot;;
@@ -383,11 +372,6 @@ const telemetryClient = initializeTelemetry({
         productId: &quot;wlp&quot;,
         envOrTrackingApiBaseUrl: &quot;development&quot;
     },
-    verbose: true,
-    loggers
-});
-
-registerCommonRoomInstrumentation(&quot;my-site-id&quot;, {
     verbose: true,
     loggers
 });
