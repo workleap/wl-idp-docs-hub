@@ -9,7 +9,7 @@ Tired of Renovate Bot? Looking for a smarter way to keep your dependencies up to
 First, install directly in your project the [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) skill. This skill will help the agent perform the validation steps that requires a browser. To do so, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
-pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser
+pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser -a claude-code --copy
 ```
 
 The command pins `skills@latest` so that pnpm downloads a version of the CLI that your registry serves. A bare `skills` can ask for a newer release that a registry such as a package firewall still holds back, and the install then fails.
@@ -105,7 +105,7 @@ All tests must pass. If a test fails, run the failing package's tests directly (
 
 ### Step 2c: Validate the "endpoints" sample app
 
-Use `agent-browser` for all browser interactions in this step. It is installed as a workspace devDependency. Read the locally installed agent skill at `.agents/skills/agent-browser/` to learn the available commands. Do NOT use `agent-browser screenshot` — use only `snapshot` (text) and `console` (errors). Screenshots are binary and cannot be analyzed. Running a build is NOT sufficient — you must start the dev server and validate in a real browser.
+Use `agent-browser` for all browser interactions in this step. It is installed as a workspace devDependency. Read the locally installed agent skill at `.claude/skills/agent-browser/` to learn the available commands. Do NOT use `agent-browser screenshot` — use only `snapshot` (text) and `console` (errors). Screenshots are binary and cannot be analyzed. Running a build is NOT sufficient — you must start the dev server and validate in a real browser.
 
 1. Start the server in the background using the shell `&` operator (do NOT use `run_in_background: true`): `pnpm serve-endpoints > /tmp/endpoints-serve.log 2>&1 &`
 2. The endpoints app listens on port **8080** (host) and **8081** (remote module). Wait for both to be ready — do NOT use `sleep`, do NOT write polling loops, do NOT parse the log file for a URL. Instead, immediately run: `curl --retry 30 --retry-delay 5 --retry-connrefused --silent --output /dev/null http://localhost:8080 && curl --retry 30 --retry-delay 5 --retry-connrefused --silent --output /dev/null http://localhost:8081`. If the curl command fails, run `cat /tmp/endpoints-serve.log` for diagnostics.
@@ -121,7 +121,7 @@ Use `agent-browser` for all browser interactions in this step. It is installed a
 
 ### Step 2d: Validate the "storybook" sample app
 
-Use `agent-browser` for all browser interactions in this step. It is installed as a workspace devDependency. Read the locally installed agent skill at `.agents/skills/agent-browser/` to learn the available commands. Do NOT use `agent-browser screenshot` — use only `snapshot` (text) and `console` (errors). Screenshots are binary and cannot be analyzed. Running a build is NOT sufficient — you must start the dev server and validate in a real browser.
+Use `agent-browser` for all browser interactions in this step. It is installed as a workspace devDependency. Read the locally installed agent skill at `.claude/skills/agent-browser/` to learn the available commands. Do NOT use `agent-browser screenshot` — use only `snapshot` (text) and `console` (errors). Screenshots are binary and cannot be analyzed. Running a build is NOT sufficient — you must start the dev server and validate in a real browser.
 
 1. Start the dev server in the background using the shell `&` operator (do NOT use `run_in_background: true`): `pnpm dev-storybook > /tmp/storybook-dev.log 2>&1 &`
 2. The storybook app listens on port **6006**. Wait for it to be ready — do NOT use `sleep`, do NOT write polling loops, do NOT parse the log file for a URL. Instead, immediately run: `curl --retry 30 --retry-delay 5 --retry-connrefused --silent --output /dev/null http://localhost:6006`

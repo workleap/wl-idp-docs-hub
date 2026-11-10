@@ -9,8 +9,8 @@ This guide describes how to set up a [GitHub Action](https://github.com/features
 First, install directly in your project the [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) and [dogfood](https://skills.sh/vercel-labs/agent-browser/dogfood) skills. To do so, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
-pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser
-pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill dogfood
+pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser -a claude-code --copy
+pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill dogfood -a claude-code --copy
 ```
 
 The commands pin `skills@latest` so that pnpm downloads a version of the CLI that your registry serves. A bare `skills` can ask for a newer release that a registry such as a package firewall still holds back, and the install then fails.
@@ -55,7 +55,7 @@ If either curl command fails, run `cat /tmp/endpoints-serve.log` for diagnostics
 
 ### Step 2 — Run the dogfood session
 
-Read and follow the skill instructions at `.agents/skills/dogfood/SKILL.md` with these parameters:
+Read and follow the skill instructions at `.claude/skills/dogfood/SKILL.md` with these parameters:
 - **Target URL**: `http://localhost:8080`
 - **Session name**: `endpoints`
 - **Output directory**: `/tmp/dogfood-output`

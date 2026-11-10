@@ -33,7 +33,7 @@ You are an automated code reviewer for this repository. Analyze the PR diff for 
 
 ## Agent skills
 
-When performing code reviews, load and use the following agent skills available in the `.agents/skills/` folder.
+When performing code reviews, load and use the following agent skills available in the `.claude/skills/` folder.
 
 ### Apply based on file name (changed lines only)
 
