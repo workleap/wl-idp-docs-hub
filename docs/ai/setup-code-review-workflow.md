@@ -52,7 +52,7 @@ When performing code reviews, load and use the following agent skills available 
 
 - Files importing `@workleap/logging` -> `/workleap-logging`
 - Files importing `@workleap/telemetry` -> `/workleap-telemetry`
-- Files importing `@workleap/browserslist-config`, `@workleap/eslint-configs`, `@workleap/stylelint-plugin`, `@workleap/typescript-configs`, `@workleap/rsbuild-configs`, `@workleap/rslib-configs` -> `/workleap-web-configs`
+- Files importing `@workleap/browserslist-config`, `@workleap/stylelint-plugin`, `@workleap/typescript-configs`, `@workleap/rsbuild-configs`, `@workleap/rslib-configs` -> `/workleap-web-configs`
 
 ## Issues reporting
 
