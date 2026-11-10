@@ -13,3 +13,9 @@ minimumReleaseAgeExclude:
 # Also loads .pnpmfile.cjs for pnpm dlx / pnpx, which ignore the project pnpmfile. The pnpmfile keeps
 # the package downloads on the GitHub package firewall, see README.md.
 globalPnpmfile: .pnpmfile.cjs
+
+# Link approved package skills into .claude/skills only, even when another .<agent>/skills dir exists
+# (pnpm's default links into every existing one).
+skills:
+    dirs:
+        - .claude/skills
