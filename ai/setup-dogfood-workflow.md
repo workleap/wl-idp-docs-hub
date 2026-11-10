@@ -9,9 +9,11 @@ This guide describes how to set up a [GitHub Action](https://github.com/features
 First, install directly in your project the [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) and [dogfood](https://skills.sh/vercel-labs/agent-browser/dogfood) skills. To do so, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
-pnpx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
-pnpx skills add https://github.com/vercel-labs/agent-browser --skill dogfood
+pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser
+pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill dogfood
 ```
+
+The commands pin `skills@latest` so that pnpm downloads a version of the CLI that your registry serves. A bare `skills` can ask for a newer release that a registry such as a package firewall still holds back, and the install then fails.
 
 Then, install the [agent-browser](https://www.npmjs.com/package/agent-browser) CLI. To do so, open a terminal at the root of the workspace and execute the following command:
 
