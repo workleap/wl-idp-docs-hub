@@ -4,3 +4,7 @@ allowBuilds:
 # Disables pnpm's default minimum release age of 24 hours. The GitHub package firewall already
 # holds back new releases.
 minimumReleaseAge: 0
+
+# Also loads .pnpmfile.cjs for pnpm dlx / pnpx, which ignore the project pnpmfile. The pnpmfile keeps
+# the package downloads on the GitHub package firewall, see README.md.
+globalPnpmfile: .pnpmfile.cjs
