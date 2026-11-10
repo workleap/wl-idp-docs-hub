@@ -14,8 +14,10 @@ Tired of Renovate Bot? Looking for a smarter way to keep your dependencies up to
 First, install directly in your project the [agent-browser](https://skills.sh/vercel-labs/agent-browser/agent-browser) skill. This skill will help the agent perform the validation steps that requires a browser. To do so, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
-pnpx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
+pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser
 ```
+
+The command pins `skills@latest` so that pnpm downloads a version of the CLI that your registry serves. A bare `skills` can ask for a newer release that a registry such as a package firewall still holds back, and the install then fails.
 
 ## Create the prompt file
 
