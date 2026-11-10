@@ -8,7 +8,7 @@ minimumReleaseAge: 1440
 
 # Workleap's own packages skip pnpm's gate (the firewall's still applies).
 minimumReleaseAgeExclude:
-  - "@workleap*"
+    - "@workleap*"
 
 # Also loads .pnpmfile.cjs for pnpm dlx / pnpx, which ignore the project pnpmfile. The pnpmfile keeps
 # the package downloads on the GitHub package firewall, see README.md.

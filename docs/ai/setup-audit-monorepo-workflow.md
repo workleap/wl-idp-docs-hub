@@ -54,7 +54,7 @@ When in doubt, do NOT report the finding.
 
 ## Step 1: Load skill documentation
 
-Read all files in `.agents/skills/turborepo/`, `.agents/skills/pnpm/`, and `.agents/skills/workleap-react-best-practices/` (including all subdirectories) so you understand the best practices to audit against. Do not skip any file.
+Read all files in `.claude/skills/turborepo/`, `.claude/skills/pnpm/`, and `.claude/skills/workleap-react-best-practices/` (including all subdirectories) so you understand the best practices to audit against. Do not skip any file.
 
 ## Step 2: Audit
 
@@ -86,9 +86,9 @@ gh issue create \
 ## Monorepo Audit Report — YYYY-MM-DD
 
 ### Skills Audited
-- Turborepo (best practices from `.agents/skills/turborepo/`)
-- pnpm (best practices from `.agents/skills/pnpm/`)
-- Workleap React Best Practices (best practices from `.agents/skills/workleap-react-best-practices/`)
+- Turborepo (best practices from `.claude/skills/turborepo/`)
+- pnpm (best practices from `.claude/skills/pnpm/`)
+- Workleap React Best Practices (best practices from `.claude/skills/workleap-react-best-practices/`)
 
 ### Summary
 
