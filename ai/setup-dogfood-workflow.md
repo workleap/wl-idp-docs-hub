@@ -13,8 +13,6 @@ pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill 
 pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill dogfood -a claude-code --copy
 ```
 
-The commands pin `skills@latest` so that pnpm downloads a version of the CLI that your registry serves. A bare `skills` can ask for a newer release that a registry such as a package firewall still holds back, and the install then fails.
-
 Then, install the [agent-browser](https://www.npmjs.com/package/agent-browser) CLI. To do so, open a terminal at the root of the workspace and execute the following command:
 
 ```bash
