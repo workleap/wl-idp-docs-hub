@@ -84,7 +84,7 @@ Each skill consumes roughly **109 characters of overhead** plus the length of it
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Agent extensions for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | - |
-Agent extensions for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Agent extensions for web configs libraries. | [workleap-*-config(s)](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#use-the-skills-bundled-with-the-packages) | - |
 Agent extensions for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for React. | [workleap-react-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
@@ -103,7 +103,7 @@ Turborepo best practices. | [vercel/turborepo](https://skills.sh/vercel/turborep
 Description | Agent skill | MCP {.agent-extensions}
 ---  | --- | ---
 Agent extension for Squide. | [workleap-squide](https://workleap.github.io/wl-squide/introduction/use-with-agents/#install-agent-skill) | - |
-Agent extension for web configs libraries. | [workleap-web-configs](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
+Agent extension for web configs libraries. | [workleap-*-config(s)](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#use-the-skills-bundled-with-the-packages) | - |
 Agent extension for telemetry libraries. | [workleap-telemetry](https://workleap.github.io/wl-telemetry/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extension for logging libraries. | [workleap-logging](https://workleap.github.io/wl-logging/introduction/use-with-agents/#install-agent-skill) | - |
 Agent extensions for React. | [workleap-react-best-practices](https://workleap.github.io/wl-web-configs/introduction/use-with-agents/#install-agent-skills) | - |
