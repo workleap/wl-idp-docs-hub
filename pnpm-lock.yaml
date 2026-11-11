@@ -173,8 +173,8 @@ importers:
         specifier: 1.92.0
         version: 1.92.0
       retypeapp:
-        specifier: 4.5.3
-        version: 4.5.3
+        specifier: 4.6.0
+        version: 4.6.0
 
 packages:
 
@@ -451,44 +451,44 @@ packages:
       vite-plus:
         optional: true
 
-  retypeapp-darwin-arm64@4.5.3:
-    resolution: {integrity: sha512-zWzS3MWtbz+0ezz0yRBicooTxWNs32CwwE7iL69P2l8QywZytC7mPJHw96tgCToJVNK60FgiqxCN3opMyZXK/g==}
+  retypeapp-darwin-arm64@4.6.0:
+    resolution: {integrity: sha512-cxtLBFDB88wbQQ94ssaV8yU11CLxM2tN5Mb+f2nY6VjjfU5UEyDBJ2YUjnr/oyX2PfgsrtOoIPciiZKEXv0hvw==}
     cpu: [arm64]
     os: [darwin]
     hasBin: true
 
-  retypeapp-darwin-x64@4.5.3:
-    resolution: {integrity: sha512-oHPQMPgb+5KWFEZqxS+kiZ1dEO4CMJMClG41zuaD7CO6TVvZJuWoT5uVG0kHuJrqIb4UseOYAEMlYeiHAfE/VA==}
+  retypeapp-darwin-x64@4.6.0:
+    resolution: {integrity: sha512-wG8+q+pmd7Bubf8MMjTfTVoUw4hrpNRRvBnWWFKrM4v7uns2kbw+HrLiB+x12DTPNTteHCRxzaZvCyhTU5apgg==}
     cpu: [x64]
     os: [darwin]
     hasBin: true
 
-  retypeapp-linux-arm64@4.5.3:
-    resolution: {integrity: sha512-e17dyJjESa548q2BkQHlP8FE6wlPj7nLKrfCCOOUkDO2YNMmpalcnBJznY4IvcYIFesGAYyctVea/JAMnym99g==}
+  retypeapp-linux-arm64@4.6.0:
+    resolution: {integrity: sha512-K1Pvo22Tssie76/zTkbzWCRQaZtVnMqD/4s+aQTpaT+S9+mm5vAkw3/KGYyJitXWSvoOXm3FqUyo63u5H4V3OQ==}
     cpu: [arm64]
     os: [linux]
     hasBin: true
 
-  retypeapp-linux-x64@4.5.3:
-    resolution: {integrity: sha512-vpfm24b1a67zkuyhK5KLOfgGEtYGdJ2sapBArzFEVXgrn2qIm4fAsrLqN1lm34dAD0CyrVY7Hlu2iUeSAseOCQ==}
+  retypeapp-linux-x64@4.6.0:
+    resolution: {integrity: sha512-eDaPhJ2q9u9j2OvylnZe6JtQSBweh5pXS93Vq1Kz19TbFqx23E/lUKPe2ZzhcoVYpjDn9Maj17UcsvUoxEP6yg==}
     cpu: [x64]
     os: [linux]
     hasBin: true
 
-  retypeapp-win-x64@4.5.3:
-    resolution: {integrity: sha512-2u/ISeBMxqg4IRJhkvBAFcQRWZzjXg+cIC9muLDnXgDwRhLfgsQ4NX+fvTvE25R94g87wCs9rUgzaKcamr6XWw==}
+  retypeapp-win-x64@4.6.0:
+    resolution: {integrity: sha512-vhv3P+v4nJptzP+mzB76LrW5E7cPKcRfRXyuQQzEmPEhc6kRQQxepy3ZxnXCGLhlniTHOu7BxWuFL0U2hJaChg==}
     cpu: [x64]
     os: [win32]
     hasBin: true
 
-  retypeapp-win-x86@4.5.3:
-    resolution: {integrity: sha512-x6oPkYZ2rHagQEtjbZRcRx+Us9Mu9JOhXGrFVw33OEe4TynuFiUTzH6wDX8qbj7OmENSK3Z5CBBLAskabENNeQ==}
+  retypeapp-win-x86@4.6.0:
+    resolution: {integrity: sha512-MEtzEvUaKtNvwI1JoKDaayv5NOE2zdZMkwO+JAgwXIeYV6H/tyGrSvEdeSYOujEsnm43+Tm8770faoqQmS1D4A==}
     cpu: [ia32]
     os: [win32]
     hasBin: true
 
-  retypeapp@4.5.3:
-    resolution: {integrity: sha512-czRqyyhIsca/Uj7oHUU0xneUASuxu83JLaa4N/gsYpVASKq6JowOpKYvCFnkqsErjRXXEAV61cRICGlvPr3DdQ==}
+  retypeapp@4.6.0:
+    resolution: {integrity: sha512-zMu7MnUqLYWtJxxIlN+i27nHeT3ZsJMgcFE7u1FkW1WQCDpwu26ypvBjKnpH7pMOilWvF7ro5N5eY6X3u9W1SA==}
     hasBin: true
 
   tinypool@2.2.0:
@@ -657,31 +657,31 @@ snapshots:
       '@oxlint/binding-win32-ia32-msvc': 1.92.0
       '@oxlint/binding-win32-x64-msvc': 1.92.0
 
-  retypeapp-darwin-arm64@4.5.3:
+  retypeapp-darwin-arm64@4.6.0:
     optional: true
 
-  retypeapp-darwin-x64@4.5.3:
+  retypeapp-darwin-x64@4.6.0:
     optional: true
 
-  retypeapp-linux-arm64@4.5.3:
+  retypeapp-linux-arm64@4.6.0:
     optional: true
 
-  retypeapp-linux-x64@4.5.3:
+  retypeapp-linux-x64@4.6.0:
     optional: true
 
-  retypeapp-win-x64@4.5.3:
+  retypeapp-win-x64@4.6.0:
     optional: true
 
-  retypeapp-win-x86@4.5.3:
+  retypeapp-win-x86@4.6.0:
     optional: true
 
-  retypeapp@4.5.3:
+  retypeapp@4.6.0:
     optionalDependencies:
-      retypeapp-darwin-arm64: 4.5.3
-      retypeapp-darwin-x64: 4.5.3
-      retypeapp-linux-arm64: 4.5.3
-      retypeapp-linux-x64: 4.5.3
-      retypeapp-win-x64: 4.5.3
-      retypeapp-win-x86: 4.5.3
+      retypeapp-darwin-arm64: 4.6.0
+      retypeapp-darwin-x64: 4.6.0
+      retypeapp-linux-arm64: 4.6.0
+      retypeapp-linux-x64: 4.6.0
+      retypeapp-win-x64: 4.6.0
+      retypeapp-win-x86: 4.6.0
 
   tinypool@2.2.0: {}
