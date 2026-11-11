@@ -17,8 +17,6 @@ First, install directly in your project the [agent-browser](https://skills.sh/ve
 pnpm dlx skills@latest add https://github.com/vercel-labs/agent-browser --skill agent-browser -a claude-code --copy
 ```
 
-The command pins `skills@latest` so that pnpm downloads a version of the CLI that your registry serves. A bare `skills` can ask for a newer release that a registry such as a package firewall still holds back, and the install then fails.
-
 ## Create the prompt file
 
 Then, create a `.github/prompts/update-dependencies.md` with the following content, and adjust the validation steps to match your project's capabilities:
