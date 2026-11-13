@@ -1,0 +1,26 @@
+name: CI
+
+on:
+    push:
+        # Renovate only merges a renovate/* branch into main once a check passed on it. See README.md.
+        branches: ["renovate/**"]
+
+concurrency:
+    group: ci-${{ github.ref }}
+    cancel-in-progress: true
+
+jobs:
+    build:
+        name: Build documentation website
+
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+
+        steps:
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+            - uses: retypeapp/action-build@511f266c5de1ef96182ff88847e6169b906f50a2 # v4.6.0
+              env:
+                  RETYPE_KEY: ${{ secrets.RETYPE_API_KEY }}
