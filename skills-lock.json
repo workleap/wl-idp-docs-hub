@@ -1,11 +1,12 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
     "git-commit": {
       "source": "github/awesome-copilot",
+      "ref": "a8940549dcf7258a2cdaa0b7fc9a9ac7fceec466",
       "sourceType": "github",
       "skillPath": "skills/git-commit/SKILL.md",
-      "computedHash": "8f5a47c99951ec09853abf3231c76f48caac5d6b84ea912dd4997e6996885c0b",
+      "computedHash": "90716f49501831c6c0679509b295495021eae83923d6a39035ce7c2d9cd2e8f2",
       "installMode": "copy"
     }
   }
